@@ -1,0 +1,112 @@
+*, *::before, *::after{
+    --MainBgColor:rgb(29, 29, 29);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+.initialMsg{
+    height: 100svh;
+    width: 100lvw;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color:var(--MainBgColor);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.active{
+    display: block;
+    opacity: 1;
+}
+
+.initialTxt{
+    width: 80svw;
+    height: auto;
+}
+
+.svgTxt {
+    fill: var(--MainBgColor);
+    animation-name: appear1;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-fill-mode: forwards;
+}
+
+.line1{
+    animation-delay: 1s;
+}
+
+.line2{
+    animation-delay: 1.5s;
+}
+
+.line3{
+    animation-delay: 2s;
+}
+
+.line4{
+    animation-delay: 2.5s;
+}
+
+.line5{
+    animation-delay: 2.75s;
+}
+
+.line6{
+    animation-delay: 3.2s;
+}
+
+.line7{
+    animation-delay: 4.5s;
+}
+
+.line8{
+    animation-delay: 5s;
+}
+
+.line9{
+    animation-delay: 5.5s;
+}
+
+.line10{
+    animation-delay: 6s;
+}
+
+.line11{
+    animation-delay: 6.5s;
+}
+
+.line12{
+    animation-delay: 7s;
+}
+
+.line13{
+    animation-delay: 8s;
+}
+
+.line14{
+    animation-delay: 8.5s;
+}
+
+.line15{
+    animation-delay: 9s;
+}
+
+.line16{
+    animation-delay: 9.5s;
+}
+
+
+@keyframes appear1{
+    from{
+        fill: var(--MainBgColor);
+    }
+    to{
+        fill: rgb(255, 255, 255);
+    }
+}
