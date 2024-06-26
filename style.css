@@ -138,5 +138,30 @@
 .header{
     width: 100%;
     height: 8svh;
-    background-color: aqua;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.menu{
+    height: 5svh;
+    width: 5svh;
+    align-self: center;
+    justify-self: end;
+    margin-right: 10%;
+
+    background-color: rgb(19, 207, 213);
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.emblem{
+    height: 18svh;
+    width: 75svw;
+    position: absolute;
+    top: 7%;
+    justify-self: center;
+    background-color: rgb(103, 160, 95);
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
