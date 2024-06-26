@@ -153,13 +153,14 @@
     background-color: rgb(19, 207, 213);
     grid-column-start: 3;
     grid-column-end: 4;
+    z-index: 10;
 }
 
 .emblem{
-    height: 18svh;
-    width: 75svw;
+    height: 20svh;
+    width: 85svw;
     position: absolute;
-    top: 7%;
+    top: 4%;
     justify-self: center;
     background-color: rgb(103, 160, 95);
     grid-column-start: 2;
