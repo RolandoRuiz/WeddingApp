@@ -156,17 +156,6 @@
     z-index: 10;
 }
 
-.emblem{
-    height: 20svh;
-    width: 85svw;
-    position: absolute;
-    top: 4%;
-    justify-self: center;
-    background-color: rgb(103, 160, 95);
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
 .menuButton{
     height: 100%;
     width: 100%;
@@ -201,4 +190,38 @@
 
 .hamCrossFocus{
     transform: scale(1);
+}
+
+.introArea{
+    width: 85svw;
+    height: 20svh;
+    position: absolute;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-self: center;
+    top: 4%;
+    /*background-color: rgb(103, 160, 95);*/
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.leftName{
+    color: #fff;
+    justify-self: start;
+    align-self: center;
+}
+
+.rightName{
+    color: #fff;
+    justify-self: start;
+    align-self: center;
+}
+
+.announcement{
+    color: #fff;
+    justify-self: center;
+    align-self: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
