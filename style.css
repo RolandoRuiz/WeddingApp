@@ -230,9 +230,18 @@
     fill: #212121;
     stroke: aqua;
     stroke-width: 25px;
+}
+
+.anim-1{
     stroke-dashoffset: 2000px;
     stroke-dasharray: 2000px;
-    animation: dash 5s linear forwards;
+    animation: dash 1s ease-in forwards;
+}
+
+.anim-2{
+    stroke-dashoffset: 2000px;
+    stroke-dasharray: 2000px;
+    animation: dash 1s ease-in forwards;
 }
 
 @keyframes dash {
@@ -243,7 +252,7 @@
 
 
 .img{
-    clip-path: url(#svgPath);
+    clip-path: url(#svgPath1);
 }
 
 .img2{
