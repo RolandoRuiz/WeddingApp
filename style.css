@@ -241,7 +241,8 @@
 .anim-2{
     stroke-dashoffset: 2000px;
     stroke-dasharray: 2000px;
-    animation: dash 1s ease-in forwards;
+    animation: dash 2s ease-out forwards;
+    animation-delay: 250ms;
 }
 
 @keyframes dash {
