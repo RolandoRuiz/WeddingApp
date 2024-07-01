@@ -227,8 +227,8 @@
 }
 
 .cls-1 {
-    fill: #212121;
-    stroke: aqua;
+    fill: var(--MainBgColor);
+    stroke: rgb(255, 255, 255);
     stroke-width: 25px;
 }
 
