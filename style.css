@@ -249,8 +249,39 @@
 .anim-3{
     stroke-dashoffset: 2000px;
     stroke-dasharray: 2000px;
-    animation: dash 1s ease-in forwards;
-    animation-delay: 345ms;
+    animation: dash 2s ease-in-out forwards;
+    animation-delay: 1050ms;
+}
+
+.anim-4{
+    stroke-dashoffset: 2000px;
+    stroke-dasharray: 2000px;
+    animation: dash 4s ease-out forwards;
+    animation-delay: 1400ms;
+}
+
+.anim-5{
+    stroke-dashoffset: 2000px;
+    stroke-dasharray: 2000px;
+    animation: dash 2s ease-in-out forwards;
+    animation-delay: 1900ms;
+}
+
+.anim-6{
+    stroke-dashoffset: 2000px;
+    stroke-dasharray: 2000px;
+    animation: dash 1.5s ease-in forwards;
+    animation-delay: 2700ms;
+}
+
+#TopB, #BottomB{
+    position: relative;
+    z-index: 10;
+}
+
+#MiddleLine{
+    position: relative;
+    z-index: -1;
 }
 
 @keyframes dash {
