@@ -235,14 +235,22 @@
 .anim-1{
     stroke-dashoffset: 2000px;
     stroke-dasharray: 2000px;
-    animation: dash 2s ease-out forwards;
-    animation-delay: 345ms;
+    animation: dash 3s ease-out forwards;
+    animation-delay: 690ms;
+    z-index: -1;
 }
 
 .anim-2{
     stroke-dashoffset: 2000px;
     stroke-dasharray: 2000px;
+    animation: dash 2s ease-in forwards;
+}
+
+.anim-3{
+    stroke-dashoffset: 2000px;
+    stroke-dasharray: 2000px;
     animation: dash 1s ease-in forwards;
+    animation-delay: 345ms;
 }
 
 @keyframes dash {
