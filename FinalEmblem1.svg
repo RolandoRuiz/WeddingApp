@@ -2226,7 +2226,6 @@
       }
 
       .cls-550 {
-        fill: #f2f2f2;
         fill: rgb(29, 29, 29);
         stroke: #f2f2f2;
         stroke-width: 25px;
