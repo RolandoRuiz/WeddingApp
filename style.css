@@ -148,6 +148,6 @@
     background-position: center;
     mask-image: url(svg/clip-wave1.svg);
     mask-repeat: no-repeat;
-    mask-size: cover;
+    mask-size: contain;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.897) inset;
 }
