@@ -30,109 +30,10 @@
     height: auto;
 }
 
-.svgTxt {
-    fill: var(--MainBgColor);
-    animation-name: appear1, disappear1;
-    animation-duration: 1s, 1s;
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    animation-fill-mode: forwards;
-}
-.line1{
-    animation-delay: 1s, 16s;
-}
-
-.line2{
-    animation-delay: 1.5s, 16s;
-}
-
-.line3{
-    animation-delay: 2s, 16s;
-}
-
-.line4{
-    animation-delay: 2.5s, 16s;
-}
-
-.line5{
-    animation-delay: 2.75s, 16s;
-}
-
-.line6{
-    animation-delay: 3.2s, 16s;
-}
-
-.line7{
-    animation-delay: 4.5s, 16s;
-}
-
-.line8{
-    animation-delay: 5s, 16s;
-}
-
-.line9{
-    animation-delay: 5.5s, 16s;
-}
-
-.line10{
-    animation-delay: 6s, 16s;
-}
-
-.line11{
-    animation-delay: 6.5s, 16s;
-}
-
-.line12{
-    animation-delay: 7s, 16s;
-}
-
-.line13{
-    animation-delay: 8s, 16s;
-}
-
-.line14{
-    animation-delay: 8.5s, 16s;
-}
-
-.line15{
-    animation-delay: 9s, 16s;
-}
-
-.line16{
-    animation-delay: 9.5s, 16s;
-}
-
-@keyframes appear1{
-    from{
-        fill: var(--MainBgColor);
-    }
-    to{
-        fill: rgb(255, 255, 255);
-    }
-}
-
-@keyframes disappear1{
-    from{
-        fill: rgb(255, 255, 255);
-    }
-    to{
-        fill: var(--MainBgColor);
-    }
-}
-
-@keyframes disappear2{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-
 .home{
     height: 100svh;
     width: 100svw;
     background-color: var(--MainBgColor);
-    display: flex;
 }
 
 .header{
@@ -141,6 +42,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
+    position: absolute;
+    top: 0%;
+    z-index: 2;
 }
 
 .menu{
@@ -224,4 +128,26 @@
     align-self: center;
     grid-column-start: 1;
     grid-column-end: 4;
+}
+
+.backgroundGallery{
+    height: 100svh;
+    width: 100lvw;
+    display: flex;
+    position: absolute;
+    top: 0%;
+    background-color: var(--MainBgColor);
+    z-index: 1;
+}
+
+.galleryFixed{
+    height: 85svh;
+    width: 100lvw;
+    background-image: url(https://images.unsplash.com/photo-1654580342825-06483f272b87?q=80&w=1064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    mask-image: url(svg/clip-wave1.svg);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.897) inset;
 }
