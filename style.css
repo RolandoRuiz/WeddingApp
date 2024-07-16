@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     border: none;
+    outline: 1px solid red;
 }
 
 
@@ -147,9 +148,8 @@
 }
 
 .galleryFixed > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-
+   height: 100%;
+   width: 100%;
+   aspect-ratio: 1 / 1;
+   object-fit: cover;
 }
