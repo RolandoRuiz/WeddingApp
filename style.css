@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     border: none;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
 }
 
 
@@ -139,6 +139,7 @@
     top: 0%;
     background-color: var(--MainBgColor);
     z-index: 1;
+    flex-direction: column;
 }
 
 .galleryFixed{
@@ -150,6 +151,63 @@
 .galleryFixed > img{
    height: 100%;
    width: 100%;
-   aspect-ratio: 1 / 1;
    object-fit: cover;
+   object-position: center;
+}
+
+.dateArea{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    align-self: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+}
+
+@font-face {
+    font-family: ponteBold;
+    src: url(fonts/pontebold.ttf);
+}
+
+@font-face {
+    font-family: clarissa;
+    src: url(fonts/Clarissa.ttf);
+}
+
+.dateDay{
+    color: #fff;
+    font-family: ponteBold;
+    align-self: self-end;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 11em;
+    transform: scale(1.05,1.2);
+
+}
+
+.dateYear{
+    color: #fff;
+    align-self: self-start;
+    font-family: ponteBold;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 3em;
+    padding-bottom: 10%;
+}
+
+.dateMonth{
+    color: #fff;
+    font-family: clarissa;
+    align-self: self-end;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 5em;
 }
