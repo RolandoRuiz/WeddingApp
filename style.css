@@ -170,7 +170,7 @@
 
 .multiply{
     position: absolute;
-    opacity: 70%;
+    opacity: 65%;
     mix-blend-mode:multiply;
     height: 87svh;
     width: 100lvw;
@@ -197,7 +197,7 @@
     grid-column-end: 2;
     font-size: 11em;
     transform: scale(1.05,1.2);
-    background: -webkit-linear-gradient(90deg, #ffffff00 23%, #ffffff 70%);
+    background: -webkit-linear-gradient(90deg, #ffffff00 20%, #ffffff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
