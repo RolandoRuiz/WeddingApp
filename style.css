@@ -155,6 +155,15 @@
     flex-direction: column;
 }
 
+.multiply{
+    position: absolute;
+    opacity: 65%;
+    mix-blend-mode:multiply;
+    height: 87svh;
+    width: 100lvw;
+    z-index: 3;
+}
+
 .galleryFixed{
     height: 85svh;
     width: 100lvw;
@@ -162,18 +171,12 @@
 }
 
 .galleryFixedImg{
+   position: absolute;
    height: 100%;
    width: 100%;
    object-fit: cover;
    object-position: center;
-}
-
-.multiply{
-    position: absolute;
-    opacity: 65%;
-    mix-blend-mode:multiply;
-    height: 87svh;
-    width: 100lvw;
+   z-index: 2;
 }
 
 .dateArea{
