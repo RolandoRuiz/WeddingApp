@@ -159,8 +159,9 @@
 .multiply{
     position: absolute;
     opacity: 65%;
+    will-change: opacity;
     mix-blend-mode:multiply;
-    height: 87svh;
+    height: 85svh;
     width: 100lvw;
     z-index: 3;
     clip-path: url(#galleryMask);
