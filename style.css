@@ -7,6 +7,16 @@
     /*outline: 1px solid red;*/
 }
 
+@font-face {
+    font-family: ponteBold;
+    src: url(fonts/pontebold.ttf);
+}
+
+@font-face {
+    font-family: clarissa;
+    src: url(fonts/Clarissa.ttf);
+}
+
 
 .initialMsg{
     height: 100svh;
@@ -124,11 +134,14 @@
 }
 
 .announcement{
-    color: #fff;
+    color: #ffffff;
     justify-self: center;
     align-self: center;
     grid-column-start: 1;
     grid-column-end: 4;
+    font-family: clarissa;
+    font-size: 4em;
+    font-weight: normal;
 }
 
 .backgroundGallery{
@@ -148,11 +161,19 @@
     clip-path: url(#galleryMask);
 }
 
-.galleryFixed > img{
+.galleryFixedImg{
    height: 100%;
    width: 100%;
    object-fit: cover;
    object-position: center;
+}
+
+.multiply{
+    position: absolute;
+    opacity: 70%;
+    mix-blend-mode:multiply;
+    height: 87svh;
+    width: 100lvw;
 }
 
 .dateArea{
@@ -167,16 +188,6 @@
     bottom: 12%;
 }
 
-@font-face {
-    font-family: ponteBold;
-    src: url(fonts/pontebold.ttf);
-}
-
-@font-face {
-    font-family: clarissa;
-    src: url(fonts/Clarissa.ttf);
-}
-
 .dateDay{
     font-family: ponteBold;
     align-self: self-end;
@@ -186,9 +197,10 @@
     grid-column-end: 2;
     font-size: 11em;
     transform: scale(1.05,1.2);
-    background: -webkit-linear-gradient(90deg, #ffffff00 15%, #ffffff 80%);
+    background: -webkit-linear-gradient(90deg, #ffffff00 23%, #ffffff 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 
 }
 
@@ -201,6 +213,7 @@
     grid-column-start: 1;
     grid-column-end: 2;
     font-size: 6em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .dateYear{
@@ -214,4 +227,5 @@
     grid-column-end: 2;
     font-size: 2.7em;
     top: 1%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
