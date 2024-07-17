@@ -163,12 +163,12 @@
     height: 87svh;
     width: 100lvw;
     z-index: 3;
+    clip-path: url(#galleryMask);
 }
 
 .galleryFixed{
     height: 85svh;
     width: 100lvw;
-    clip-path: url(#galleryMask);
 }
 
 .galleryFixedImg{
@@ -178,6 +178,7 @@
    object-position: center;
    position: relative;
    z-index: 2;
+   clip-path: url(#galleryMask);
 }
 
 .dateArea{
@@ -191,6 +192,7 @@
     position: absolute;
     bottom: 12%;
     z-index: 3;
+    
 }
 
 .dateDay{
