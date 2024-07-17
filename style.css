@@ -186,7 +186,7 @@
     grid-column-end: 2;
     font-size: 11em;
     transform: scale(1.05,1.2);
-    background: -webkit-linear-gradient(90deg, #ffffff00 10%, #ffffff 80%);
+    background: -webkit-linear-gradient(90deg, #ffffff00 15%, #ffffff 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
