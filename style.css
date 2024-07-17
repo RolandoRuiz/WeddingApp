@@ -45,6 +45,7 @@
     height: 100svh;
     width: 100svw;
     background-color: var(--MainBgColor);
+    display: grid;
 }
 
 .header{
@@ -115,7 +116,7 @@
     grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     justify-self: center;
-    top: 4%;
+    top: 50%;
     /*background-color: rgb(103, 160, 95);*/
     grid-column-start: 2;
     grid-column-end: 3;
@@ -171,12 +172,10 @@
 }
 
 .galleryFixedImg{
-   position: absolute;
    height: 100%;
    width: 100%;
    object-fit: cover;
    object-position: center;
-   z-index: 2;
 }
 
 .dateArea{
@@ -189,6 +188,7 @@
     align-items: center;
     position: absolute;
     bottom: 12%;
+    z-index: 3;
 }
 
 .dateDay{
