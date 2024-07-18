@@ -143,6 +143,7 @@
     font-family: clarissa;
     font-size: 4em;
     font-weight: normal;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .backgroundGallery{
@@ -240,4 +241,47 @@
 .objectBox{
     position: absolute;
     top: 0%;
+}
+
+.counterBox{
+    position: absolute;
+    display: grid;
+    width: 100svw;
+    align-items: center;
+    justify-items: center;
+    top: 86%;
+    z-index: 10;
+}
+
+.dateText{
+    position: relative;
+    color: #ffffff  ;
+    font-family: clarissa;
+    font-size: 2.5em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+#dateCounter{
+    position: relative;
+    bottom: 30%;
+    color: #ffffff;
+    font-family: ponteBold;
+    font-size: 2.2em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.downArrow{
+    width: 100svw;
+    height: 3svh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 1.5%;
+    z-index: 100;
+}
+
+.downArrow > img{
+
+    height: 100%;
 }
