@@ -266,13 +266,13 @@
     bottom: 30%;
     color: #ffffff;
     font-family: ponteBold;
-    font-size: 2.2em;
+    font-size: 2.1em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .downArrow{
     width: 100svw;
-    height: 3svh;
+    height: 2svh;
     position: absolute;
     display: flex;
     align-items: center;
