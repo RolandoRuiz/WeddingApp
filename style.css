@@ -188,7 +188,6 @@
     position: absolute;
     z-index: 100;
     bottom: 0%;
-    border: red solid 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -254,25 +253,17 @@
     top: 0%;
 }
 
-.counterBox{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 10;
-}
-
 .dateText{
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    height: 5svh;
-    color: #ffffff  ;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    color: #ffffff;
     font-family: clarissa;
     font-size: 2.4em;
+    line-height: 1em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    justify-items: center;
+    align-items: flex-end;
 }
 
 #dateCounter{
@@ -280,10 +271,12 @@
     color: #ffffff;
     font-family: ponteBold;
     font-size: 0.95em;
+    line-height: 1em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-    bottom: 30%;
-    height: 5svh;
-
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-items: center;
+    align-items: flex-start;
 }
 
 .downArrow{
@@ -293,7 +286,7 @@
     align-items: center;
     justify-content: center;
     z-index: 100;
-    top: 2%;
+    top: 1.5%;
 }
 
 .downArrow > img{
