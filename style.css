@@ -260,7 +260,7 @@
     color: #ffffff;
     font-family: clarissa;
     font-size: 2.4em;
-    line-height: 1em;
+    line-height: 0.8em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
     justify-items: center;
     align-items: flex-end;
@@ -271,7 +271,7 @@
     color: #ffffff;
     font-family: ponteBold;
     font-size: 0.95em;
-    line-height: 1em;
+    line-height: 0.9em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
     grid-row-start: 2;
     grid-row-end: 3;
