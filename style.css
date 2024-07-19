@@ -182,16 +182,26 @@
    z-index: 2;
 }
 
+.dateTextBox{
+    height: 42svh;
+    width: 100svw;
+    position: absolute;
+    z-index: 100;
+    bottom: 0%;
+    border: red solid 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .dateArea{
-    height: 30svh;
+    height: 25svh;
     display: grid;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     align-self: center;
-    justify-self: center;
     justify-items: center;
     align-items: center;
-    position: absolute;
-    bottom: 13%;
+    position: relative;
     z-index: 3;
     
 }
@@ -206,6 +216,7 @@
     font-size: 11em;
     transform: scale(1.05,1.2);
     background: -webkit-linear-gradient(90deg, #ffffff00 20%, #ffffff 70%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
@@ -244,12 +255,10 @@
 }
 
 .counterBox{
-    position: absolute;
-    display: grid;
-    width: 100svw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-    top: 86%;
     z-index: 10;
 }
 
@@ -257,32 +266,31 @@
     position: relative;
     color: #ffffff  ;
     font-family: clarissa;
-    font-size: 2.6em;
+    font-size: 2.5em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
 }
 
 #dateCounter{
     position: relative;
-    bottom: 30%;
     color: #ffffff;
     font-family: ponteBold;
-    font-size: 2.3em;
+    font-size: 2.2em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+
 }
 
 .downArrow{
-    width: 100svw;
     height: 2svh;
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    bottom: 1.5%;
     z-index: 100;
 }
 
 .downArrow > img{
 
     height: 100%;
-    display: flex;
+    
 }
