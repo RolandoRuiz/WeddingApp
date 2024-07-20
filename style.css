@@ -163,13 +163,13 @@
     opacity: 65%;
     will-change: opacity;
     mix-blend-mode:multiply;
-    height: 85svh;
+    height: 84svh;
     width: 100lvw;
     z-index: 3;
 }
 
 .galleryFixed{
-    height: 85svh;
+    height: 84svh;
     width: 100lvw;
     clip-path: url(#galleryMask);
 }
