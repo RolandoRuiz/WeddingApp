@@ -1,5 +1,5 @@
 *, *::before, *::after{
-    --MainBgColor:rgb(29, 29, 29);
+    --MainBgColor:rgb(248, 247, 247);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -117,7 +117,7 @@
     grid-template-rows: 3fr 1fr;
     grid-template-columns: 1fr 2fr 1fr;
     justify-self: center;
-    top: 50%;
+    top: 30%;
     /*background-color: rgb(103, 160, 95);*/
     grid-column-start: 2;
     grid-column-end: 3;
@@ -127,12 +127,26 @@
     color: #fff;
     justify-self: start;
     align-self: center;
+    font-family: clarissa;
+    font-weight: 100;
+    font-size: 2.2em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .rightName{
     color: #fff;
-    justify-self: start;
+    justify-self: end;
     align-self: center;
+    font-family: clarissa;
+    font-weight: 100;
+    font-size: 2.2em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.emblem{
+    position: relative;
+    right: 4.5%;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 .announcement{
@@ -160,18 +174,21 @@
 
 .multiply{
     position: absolute;
-    opacity: 65%;
+    opacity: 80%;
     will-change: opacity;
     mix-blend-mode:multiply;
     height: 84svh;
     width: 100lvw;
-    z-index: 3;
+    z-index: 5;
+
 }
 
 .galleryFixed{
     height: 84svh;
     width: 100lvw;
     clip-path: url(#galleryMask);
+    mask-image: linear-gradient(200deg, rgb(0, 0, 0) 60%, rgba(255, 255, 255, 0) 85%);
+    
 }
 
 .galleryFixedImg{
@@ -215,16 +232,15 @@
     grid-column-end: 2;
     font-size: 10em;
     transform: scale(1,1.2);
-    background: -webkit-linear-gradient(90deg, #ffffff00 20%, #ffffff 70%);
+    background: -webkit-linear-gradient(90deg, #ffffff 100%, #ffffff 0%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
-
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.9));
 }
 
 .dateMonth{
-    color: #fff;
+    color: #454545;
     font-family: clarissa;
     align-self: flex-end;
     grid-row-start: 5;
@@ -232,11 +248,11 @@
     grid-column-start: 1;
     grid-column-end: 2;
     font-size: 6em;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
 }
 
 .dateYear{
-    color: #fff;
+    color: #454545;
     position: relative;
     align-self: flex-end;
     font-family: ponteBold;
@@ -246,7 +262,7 @@
     grid-column-end: 2;
     font-size: 2.5em;
     top: 1%;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
 }
 
 .objectBox{
@@ -258,22 +274,22 @@
     position: relative;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    color: #ffffff;
+    color: #454545;
     font-family: clarissa;
-    font-size: 2.4em;
-    line-height: 0.8em;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    font-size: 2.8em;
+    line-height: 0.76em;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
     justify-items: center;
     align-items: flex-end;
 }
 
 #dateCounter{
     position: relative;
-    color: #ffffff;
+    color: #454545;
     font-family: ponteBold;
-    font-size: 0.95em;
+    font-size: 0.8em;
     line-height: 0.9em;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
     grid-row-start: 2;
     grid-row-end: 3;
     justify-items: center;
@@ -288,12 +304,12 @@
     justify-content: center;
     z-index: 100;
     top: 1.5%;
+    
 }
 
 .downArrow > img{
 
     height: 100%;
-    
 }
 
 .svgTxt {
