@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: ponteBold;
-    src: url(fonts/pontebold.ttf);
+    src: url(fonts/veloursemibold.ttf);
 }
 
 @font-face {
@@ -226,12 +226,13 @@
 .dateDay{
     font-family: ponteBold;
     align-self: self-end;
+    letter-spacing: 0em;
     grid-row-start: 4;
     grid-row-end: 6;
     grid-column-start: 1;
     grid-column-end: 2;
     font-size: 10em;
-    transform: scale(1,1.2);
+    transform: scale(1.2,1.3);
     background: -webkit-linear-gradient(90deg, #ffffff 100%, #ffffff 0%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -256,12 +257,13 @@
     position: relative;
     align-self: flex-end;
     font-family: ponteBold;
+    letter-spacing: 0em;
     grid-row-start: 5;
     grid-row-end: 7;
     grid-column-start: 1;
     grid-column-end: 2;
     font-size: 2.5em;
-    top: 1%;
+    top: 1.5%;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
 }
 
@@ -289,6 +291,7 @@
     font-family: ponteBold;
     font-size: 0.9em;
     line-height: 0.9em;
+    letter-spacing: -0.05em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
     grid-row-start: 2;
     grid-row-end: 3;
@@ -394,8 +397,82 @@
     }
 }
 
-.invitationText{
-    height: 100svh;
+.invitationTextBox{
+    height: 103svh;
     width: 100svw;
     background-color: rgb(248, 247, 247);
+    display: grid;
+    align-items: center;
+}
+
+.invitationText{
+    height: 60svh;
+    width: 100%;
+    display: grid;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: relative;
+    bottom: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.mainText1{
+    font-family: ponteBold;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1em;
+    letter-spacing: -0.05em;
+}
+
+.mainText2{
+    font-family: clarissa;
+    text-align: center;
+    font-size: 2em;
+    line-height: 0.9em;
+}
+
+#text01{
+    display: grid;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text02{
+    display: grid;
+    grid-row-start: 5;
+    grid-row-end: 7;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text03{
+    display: grid;
+    grid-row-start: 8;
+    grid-row-end: 9;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text04{
+    display: grid;
+    grid-row-start: 10;
+    grid-row-end: 12;
+    align-items: start;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text05{
+    display: grid;
+    grid-row-start: 13;
+    grid-row-end: 16;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
