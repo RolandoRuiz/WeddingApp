@@ -9,7 +9,12 @@
 
 @font-face {
     font-family: ponteBold;
-    src: url(fonts/veloursemibold.ttf);
+    src: url(fonts/pontebold.ttf);
+}
+
+@font-face {
+    font-family: MirageMedium;
+    src: url(fonts/Mirage-Medium.otf);
 }
 
 @font-face {
@@ -256,7 +261,7 @@
     color: #1e1e1e;
     position: relative;
     align-self: flex-end;
-    font-family: ponteBold;
+    font-family: MirageMedium;
     letter-spacing: 0em;
     grid-row-start: 5;
     grid-row-end: 7;
@@ -288,10 +293,9 @@
 #dateCounter{
     position: relative;
     color: #1e1e1e;
-    font-family: ponteBold;
+    font-family: MirageMedium;
     font-size: 0.9em;
     line-height: 0.9em;
-    letter-spacing: -0.05em;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
     grid-row-start: 2;
     grid-row-end: 3;
@@ -406,7 +410,7 @@
 }
 
 .invitationText{
-    height: 60svh;
+    height: 70svh;
     width: 100%;
     display: grid;
     padding-left: 5%;
@@ -418,11 +422,10 @@
 }
 
 .mainText1{
-    font-family: ponteBold;
+    font-family: mirageMedium;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
     line-height: 1em;
-    letter-spacing: -0.05em;
 }
 
 .mainText2{
