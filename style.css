@@ -405,7 +405,7 @@
 }
 
 .invitationTextBox{
-    height: 103svh;
+    height: 120lvh;
     width: 100svw;
     background-color: rgb(248, 247, 247);
     display: grid;
@@ -413,15 +413,15 @@
 }
 
 .invitationText{
-    height: 85svh;
+    height: 80lvh;
     width: 100%;
     display: grid;
     padding-left: 5%;
     padding-right: 5%;
     position: relative;
-    bottom: 5%;
+    bottom: 2%;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(24, 1fr);
 }
 
 .mainText1{
@@ -435,14 +435,21 @@
     font-family: clarissa;
     -webkit-text-stroke: 0.5px #1e1e1e;
     text-align: center;
-    font-size: 2.8em;
+    font-size: 2.5em;
     line-height: 0.9em;
+}
+
+.parentBox{
+    display: grid;
+    grid-row-start: 5;
+    grid-row-end: 17;
+    align-items: center;
 }
 
 #text01{
     display: grid;
     grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-end: 4;
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -450,8 +457,16 @@
 
 #text02{
     display: grid;
-    grid-row-start: 3;
+    grid-row-start: 7;
     grid-row-end: 7;
+    align-items: start;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text03{
+    display: grid;
+
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -459,8 +474,7 @@
 
 #text03{
     display: grid;
-    grid-row-start: 8;
-    grid-row-end: 9;
+
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
@@ -468,8 +482,7 @@
 
 #text04{
     display: grid;
-    grid-row-start: 9;
-    grid-row-end: 12;
+
     align-items: center;
     justify-content: center;
     grid-column-start: 1;
@@ -478,8 +491,8 @@
 
 #text05{
     display: grid;
-    grid-row-start: 14;
-    grid-row-end: 17;
+    grid-row-start: 20;
+    grid-row-end: 25;
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
