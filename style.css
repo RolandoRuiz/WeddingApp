@@ -427,12 +427,25 @@
 .mainText1{
     font-family: mirageMedium;
     text-align: center;
+    position: relative;
+    z-index: 1;
     font-size: 1.6em;
     line-height: 1em;
+}
+.subtext1{
+    font-family: mirageMedium;
+    position: relative;
+    z-index: 0;
+    text-align: center;
+    font-size: 1.6em;
+    line-height: 1em;
+    color: rgb(203, 203, 203);
 }
 
 .mainText2{
     font-family: clarissa;
+    position: relative;
+    z-index: 2;
     -webkit-text-stroke: 0.5px #1e1e1e;
     text-align: center;
     font-size: 2.5em;
@@ -442,7 +455,10 @@
 .parentBox{
     display: grid;
     grid-row-start: 5;
-    grid-row-end: 17;
+    grid-row-end: 19;
+    padding-left: 5%;
+    padding-right: 5%;
+    grid-template-rows: repeat(10, 1fr);
     align-items: center;
 }
 
@@ -457,32 +473,51 @@
 
 #text02{
     display: grid;
-    grid-row-start: 7;
-    grid-row-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 3;
     align-items: start;
+    justify-content: start;
+    text-align: start;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text23{
+    display: grid;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-items: center;
+    justify-content: center;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 #text03{
     display: grid;
-
-    align-items: center;
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-
-#text03{
-    display: grid;
-
-    align-items: center;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    align-items: start;
+    justify-content: end;
+    text-align: end;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 #text04{
     display: grid;
+    grid-row-start: 7;
+    grid-row-end: 9;
+    align-items: start;
+    justify-content: start;
+    text-align: start;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
 
+#text45{
+    display: grid;
+    grid-row-start: 8;
+    grid-row-end: 10;
     align-items: center;
     justify-content: center;
     grid-column-start: 1;
@@ -490,6 +525,17 @@
 }
 
 #text05{
+    display: grid;
+    grid-row-start: 9;
+    grid-row-end: 11;
+    align-items: start;
+    justify-content: end;
+    text-align: end;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#text06{
     display: grid;
     grid-row-start: 20;
     grid-row-end: 25;
