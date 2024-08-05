@@ -4,7 +4,11 @@
     padding: 0;
     margin: 0;
     border: none;
-    outline: 1px solid red;
+    /*outline: 1px solid red;*/
+}
+
+body{
+    background-color: var(--MainBgColor);
 }
 
 @font-face {
@@ -192,7 +196,7 @@
     height: 84svh;
     width: 100lvw;
     clip-path: url(#galleryMask);
-    mask-image: linear-gradient(200deg, rgb(0, 0, 0) 60%, rgba(255, 255, 255, 0) 85%);
+    mask-image: linear-gradient(180deg, rgb(0, 0, 0) 60%, rgba(255, 255, 255, 0.042) 90%);
     
 }
 
@@ -486,7 +490,7 @@
     align-self: center;
     justify-content: center;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #text03{
@@ -551,13 +555,55 @@
 .galleryView{
     display: grid;
     width: 100%;
-    height: 70%;
+    height: 74%;
+    display: flex;
+}
+
+.galleryButtons{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.leftgalBtn{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    background-color: rgba(127, 255, 212, 0.354);
+}
+
+.rightgalBtn{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    background-color: rgba(127, 255, 212, 0.352);
+}
+
+.galleryPhotos{
+    position: absolute;
+    width: 100%;
+    height: 74%;
+    z-index: 1;
+    clip-path: url(#galleryMask2);
+    mask-image: linear-gradient(200deg, rgba(255, 255, 255, 0) 17%,rgb(0, 0, 0) 25%, rgb(0, 0, 0) 70%, rgba(255, 255, 255, 0) 90%);
+   
+}
+
+.photoFrame{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .galleryText{
-    display: grid;
+    display: flex;
     width: 100%;
-    height: 30%;
+    height: 26%;
+    align-items: center;
 }
 
 .margin1{
