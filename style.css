@@ -545,47 +545,36 @@ body{
 }
 
 .mainGallery{
-    height: 100lvh;
+    position: relative;
+    height: 108lvh;
     width: 100svw;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 
 }
 
 .galleryView{
-    display: grid;
     width: 100%;
-    height: 74%;
+    height: 73%;
     display: flex;
+    position: relative;
 }
 
-.galleryButtons{
-    position: relative;
+.galleryText{
+    position: absolute;
     display: flex;
-    justify-content: space-between;
-    height: 100%;
+    flex-direction: column;
+    bottom: 0%;
     width: 100%;
-    z-index: 2;
-}
-
-.leftgalBtn{
-    position: relative;
-    height: 100%;
-    width: 10%;
-    background-color: rgba(127, 255, 212, 0.354);
-}
-
-.rightgalBtn{
-    position: relative;
-    height: 100%;
-    width: 10%;
-    background-color: rgba(127, 255, 212, 0.352);
+    height: 27%;
+    align-items: center;
 }
 
 .galleryPhotos{
     position: absolute;
     width: 100%;
-    height: 74%;
+    height: 100%;
     z-index: 1;
     clip-path: url(#galleryMask2);
     mask-image: linear-gradient(200deg, rgba(255, 255, 255, 0) 17%,rgb(0, 0, 0) 25%, rgb(0, 0, 0) 70%, rgba(255, 255, 255, 0) 90%);
@@ -599,11 +588,44 @@ body{
     object-position: center;
 }
 
-.galleryText{
+.galleryButtons{
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 100%;
     width: 100%;
-    height: 30%;
+    z-index: 2;
+}
+
+.leftgalBtn{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-left: 4%;
+}
+
+.rightgalBtn{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 4%;
+}
+
+.leftIcon{
+    filter: drop-shadow(3px 5px 3px rgba(36, 36, 36, 0.423));
+}
+
+.rightIcon{
+    filter: drop-shadow(3px 5px 3px rgba(36, 36, 36, 0.423));
 }
 
 .margin1{
