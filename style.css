@@ -433,7 +433,7 @@ body{
     text-align: center;
     position: relative;
     z-index: 1;
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 1em;
     color: #1e1e1e;
 }
@@ -558,6 +558,7 @@ body{
     width: 100%;
     height: 73%;
     display: flex;
+    align-items: center;
     position: relative;
 }
 
@@ -606,6 +607,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 5%;
     padding-left: 4%;
 }
 
@@ -617,6 +619,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 5%;
     padding-right: 4%;
 }
 
@@ -631,4 +634,10 @@ body{
 .margin1{
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.scheduleSection{
+    position: relative;
+    width: 100svw;
+    height: 100svh;
 }
