@@ -459,9 +459,10 @@ body{
     font-family: mirageMedium;
     text-align: center;
     position: relative;
-    font-size: 0.4rem;
+    font-size: 0.4em;
     line-height: 1em;
     color: #1e1e1e;
+    bottom: 10%;
 }
 
 .parentBox{
@@ -760,6 +761,14 @@ body{
 #act3{
     grid-row-start: 7;
     grid-row-end: 8;
+    background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+#act4{
+    grid-row-start: 9;
+    grid-row-end: 10;
     background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
     grid-column-start: 1;
     grid-column-end: 2;
