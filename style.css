@@ -695,7 +695,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(22, 1fr);
+    grid-template-rows: repeat(23, 1fr);
 }
 
 .activityBgr{
@@ -737,8 +737,8 @@ body{
 
 #act1{
     grid-row-start: 2;
-    grid-row-end: 3;
-    background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
+    grid-row-end: 4;
+    background: -webkit-linear-gradient(transparent 10%, rgb(248, 247, 247) 31%, rgb(248, 247, 247) 75%, transparent 95%);
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -752,24 +752,78 @@ body{
 
 #act2{
     grid-row-start: 5;
-    grid-row-end: 6;
-    background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
+    grid-row-end: 7;
+    background: -webkit-linear-gradient(transparent 10%, rgb(248, 247, 247) 31%, rgb(248, 247, 247) 75%, transparent 95%);
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
 #act3{
     grid-row-start: 7;
-    grid-row-end: 8;
-    background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
+    grid-row-end: 9;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
     grid-column-start: 1;
     grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
 }
 
 #act4{
     grid-row-start: 9;
-    grid-row-end: 10;
-    background: -webkit-linear-gradient(transparent 20%, rgb(248, 247, 247) 21%, rgb(248, 247, 247) 100%, transparent 100%);
+    grid-row-end: 11;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
     grid-column-start: 1;
     grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#act5{
+    grid-row-start: 11;
+    grid-row-end: 13;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#act6{
+    grid-row-start: 13;
+    grid-row-end: 15;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#act7{
+    grid-row-start: 15;
+    grid-row-end: 17;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#act8{
+    grid-row-start: 17;
+    grid-row-end: 19;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+#act9{
+    grid-row-start: 19;
+    grid-row-end: 21;
+    background: -webkit-linear-gradient(transparent 0%, rgb(248, 247, 247) 20%, rgb(248, 247, 247) 80%, transparent 100%);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    align-items: center;
+    justify-content: center;
 }
