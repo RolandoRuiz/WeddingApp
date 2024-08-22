@@ -832,64 +832,105 @@ body{
     position: relative;
     width: 100svw;
     height: 100lvh;
-    background-color: aqua;
+    background-color:var(--MainBgColor);
     display: grid;
     flex-direction: column;
     justify-items: center;
-    grid-template-rows: repeat(11, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     grid-template-columns: repeat(1, 1fr);
 }
 
 .directionMap{
     width: 100%;
     height: 100%;
-    background-color: rgb(192, 119, 24);
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/County_Dublin_-_Holmpatrick_Church_of_Ireland_Church_-_20190615195717.jpg/800px-County_Dublin_-_Holmpatrick_Church_of_Ireland_Church_-_20190615195717.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 9;
-}
-
-.directionMap iframe{
-    height: 100%;
-    width: 100%;
+    grid-row-end: 15;
+    clip-path: url(#galleryMask);
+    mask-image: linear-gradient(180deg, rgb(0, 0, 0) 65%, rgba(255, 255, 255, 0.042) 95%);
 }
 
 .directionInfo{
-    width: 90%;
+    width: 85%;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 7;
-    grid-row-end: 10;
+    grid-row-start: 10;
+    grid-row-end: 15;
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
+    z-index: 10;
 }
 
 .buttonBox{
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
     position: relative;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .infoCards{
-    background-color: var(--MainBgColor);
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 2;
+    grid-row-start: 3;
     grid-row-end: 6;
     border-radius: 15px;
-    margin-top: 3%;
+    margin-top: 2%;
+    background-color: rgba(248, 247, 247, 1);
+    box-shadow: 0px 8px 10px rgba(132, 132, 132, 0.639);
+}
+
+.locationTitle{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    font-family: clarissa;
+    position: relative;
+    z-index: 2;
+    color: var(--MainBgColor);
+    text-align: center;
+    font-size: 3.6rem;
+    line-height: 1em;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.639);
 }
 
 .dirBtn{
-    
+    font-family: mirageMedium;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    line-height: 1em;
+    color: #1e1e1e;
+
+    height: 70%;
     width: 85%;
-    margin: 2%;
+    margin: 4%;
     border-radius: 100px;
+    background-color: rgba(248, 247, 247, 0.7);
+    cursor: pointer;
+}
+
+.dirBtn:focus{
+    background-color: rgba(248, 247, 247, 1);
+}
+
+.divider{
+    position: absolute;
+    height: 80%;
+    width: 2.3px;
+    background-color: var(--MainBgColor);
 }
