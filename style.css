@@ -850,18 +850,19 @@ body{
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 15;
+    grid-row-end: 17;
     clip-path: url(#galleryMask);
     mask-image: linear-gradient(180deg, rgb(0, 0, 0) 65%, rgba(255, 255, 255, 0.042) 95%);
 }
 
 .directionInfo{
-    width: 85%;
+    width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 10;
     grid-row-end: 15;
     display: grid;
+    justify-items: center;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
     z-index: 10;
@@ -872,6 +873,7 @@ body{
     grid-column-end: 2;
     grid-row-start: 2;
     grid-row-end: 3;
+    width: 85%;
     position: relative;
     display: grid;
     grid-template-rows: 1fr;
@@ -885,6 +887,7 @@ body{
     grid-column-end: 2;
     grid-row-start: 3;
     grid-row-end: 6;
+    width: 85%;
     border-radius: 15px;
     margin-top: 2%;
     background-color: rgba(248, 247, 247, 1);
@@ -902,8 +905,8 @@ body{
     z-index: 2;
     color: var(--MainBgColor);
     text-align: center;
-    font-size: 3.6rem;
-    line-height: 1em;
+    font-size: 3.6em;
+    line-height: 0.8em;
     text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.639);
 }
 
@@ -912,12 +915,12 @@ body{
     text-align: center;
     position: relative;
     z-index: 1;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1em;
     color: #1e1e1e;
 
-    height: 70%;
-    width: 85%;
+    height: 65%;
+    width: 90%;
     margin: 4%;
     border-radius: 100px;
     background-color: rgba(248, 247, 247, 0.7);
