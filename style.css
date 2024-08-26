@@ -906,6 +906,7 @@ body{
     grid-column-end: 2;
     display: grid;
     justify-items: center;
+    margin-bottom: 3%;
 }
 
 .locationTitle .lt1{
@@ -914,21 +915,25 @@ body{
     z-index: 2;
     color: var(--MainBgColor);
     text-align: center;
-    font-size: 1.6em;
-    line-height: 1.6em;
-    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.639);
+    font-size: 1.4em;
+    line-height: 2.2em;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
+    
 }
 
 .locationTitle .lt2{
     font-family: clarissa;
     position: relative;
     z-index: 2;
-    color: var(--MainBgColor);
+    color: #f07fbd;
     text-align: center;
+    font-weight: 500;
     margin-right: 6%;
     font-size: 5.5em;
-    line-height: 0.8em;
-    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.639);
+    line-height: 0.5em;
+    -webkit-text-stroke: #f07fbd 0.5px;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
+    z-index: 3;
 }
 
 .locationTitle .lt3{
@@ -937,9 +942,9 @@ body{
     z-index: 2;
     color: var(--MainBgColor);
     text-align: center;
-    font-size: 1.5em;
-    line-height: 1em;
-    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.639);
+    font-size: 1.3em;
+    line-height: 0.9em;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
 .dirBtn{
