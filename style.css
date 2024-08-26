@@ -31,6 +31,16 @@ body{
     src: url(fonts/Clarissa.ttf);
 }
 
+@font-face {
+    font-family: stylish;
+    src: url(fonts/Stylish.otf);
+}
+
+@font-face {
+    font-family: breathine;
+    src: url(fonts/Breathine.otf);
+}
+
 
 .initialMsg{
     height: 100svh;
@@ -845,7 +855,7 @@ body{
     grid-template-columns: repeat(1, 1fr);
 }
 
-.directionMap{
+.directionImg{
     width: 100%;
     height: 100%;
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/County_Dublin_-_Holmpatrick_Church_of_Ireland_Church_-_20190615195717.jpg/800px-County_Dublin_-_Holmpatrick_Church_of_Ireland_Church_-_20190615195717.jpg);
@@ -857,7 +867,14 @@ body{
     grid-row-start: 1;
     grid-row-end: 17;
     clip-path: url(#galleryMask);
-    mask-image: linear-gradient(180deg, rgb(0, 0, 0) 65%, rgba(255, 255, 255, 0.042) 95%);
+}
+
+.directionImgGradient{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.84) 20%, rgba(0, 0, 0, 0.042) 60%);
+    z-index: 100;
 }
 
 .directionInfo{
@@ -897,6 +914,7 @@ body{
     margin-top: 2%;
     background-color: rgba(248, 247, 247, 1);
     box-shadow: 0px 8px 10px rgba(132, 132, 132, 0.639);
+    display: none;
 }
 
 .locationTitle{
@@ -915,23 +933,20 @@ body{
     z-index: 2;
     color: var(--MainBgColor);
     text-align: center;
-    font-size: 1.4em;
-    line-height: 2.2em;
+    font-size: 1.3em;
+    line-height: 0.2em;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
     
 }
 
 .locationTitle .lt2{
-    font-family: clarissa;
+    font-family: stylish;
     position: relative;
-    z-index: 2;
-    color: #f07fbd;
+    color: var(--MainBgColor);
     text-align: center;
     font-weight: 500;
-    margin-right: 6%;
     font-size: 5.5em;
     line-height: 0.5em;
-    -webkit-text-stroke: #f07fbd 0.5px;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
     z-index: 3;
 }
@@ -940,11 +955,12 @@ body{
     font-family: MirageMedium;
     position: relative;
     z-index: 2;
-    color: var(--MainBgColor);
+    color: #cacaca;
     text-align: center;
-    font-size: 1.3em;
-    line-height: 0.9em;
+    font-size: 1.5em;
+    line-height: 1em;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
+    margin-top: 1em;
 }
 
 .dirBtn{
@@ -956,7 +972,7 @@ body{
     line-height: 1em;
     color: #1e1e1e;
 
-    height: 65%;
+    height: 85%;
     width: 90%;
     margin: 4%;
     border-radius: 100px;
