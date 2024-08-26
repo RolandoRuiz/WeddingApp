@@ -931,7 +931,7 @@ body{
     font-family: MirageMedium;
     position: relative;
     z-index: 2;
-    color: var(--MainBgColor);
+    color: #cacaca;
     text-align: center;
     font-size: 1.3em;
     line-height: 0.2em;
