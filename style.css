@@ -956,18 +956,20 @@ body{
     font-size: 1.3em;
     line-height: 0.2em;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
-
+    scale: 1;
 }
 
 @keyframes vanish{
     from{
         display: block;
         opacity: 1;
+        scale: 1;
     }
 
     to{
         display: none;
         opacity: 0;
+        scale: 0.90;
     }
 }
 
@@ -975,11 +977,13 @@ body{
     from{
         display: grid;
         opacity: 1;
+        scale: 1;
     }
 
     to{
         display: none;
         opacity: 0;
+        scale: 0.90;
     }
 }
 
@@ -993,6 +997,7 @@ body{
     line-height: 0.5em;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
     z-index: 3;
+    scale: 1;
 }
 
 .lt3{
@@ -1005,6 +1010,7 @@ body{
     line-height: 1em;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
     margin-top: 1em;
+    scale: 1;
 }
 
 .buttonBox{
@@ -1019,6 +1025,7 @@ body{
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
+    scale: 1;
 }
 
 .dirBtn{

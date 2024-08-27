@@ -35,10 +35,10 @@ function seeCer(){
   coupleImg.style.opacity = 0;
   coupleImg.style.scale = 0.96;
 
-  LT1.style.animation = "vanish 1s forwards";
-  LT2.style.animation = "vanish 1s forwards";
-  LT3.style.animation = "vanish 1s forwards";
-  BB1.style.animation = "vanishGrid 1s forwards";
+  LT1.style.animation = "vanish 0.8s 0.1s forwards";
+  LT2.style.animation = "vanish 0.8s 0.2s forwards";
+  LT3.style.animation = "vanish 0.8s 0.4s forwards";
+  BB1.style.animation = "vanishGrid 0.8s 0.4s forwards";
 
   
 }
