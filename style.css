@@ -890,20 +890,6 @@ body{
     z-index: 10;
 }
 
-.buttonBox{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    width: 85%;
-    position: relative;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-}
-
 .infoCards{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -963,6 +949,20 @@ body{
     margin-top: 1em;
 }
 
+.buttonBox{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 85%;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
 .dirBtn{
     font-family: mirageMedium;
     text-align: center;
@@ -972,9 +972,9 @@ body{
     line-height: 1em;
     color: #1e1e1e;
 
-    height: 85%;
+    height: 80%;
     width: 90%;
-    margin: 4%;
+    margin: 6%;
     border-radius: 100px;
     background-color: rgba(248, 247, 247, 0.7);
     cursor: pointer;
