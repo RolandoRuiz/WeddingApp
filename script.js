@@ -20,6 +20,15 @@ function unTouch() {
 
 }
 
+function seeCer(){
+
+  const backgroundImg = document.getElementById('ImgBox');
+
+  backgroundImg.style.scale = 1;
+  backgroundImg.style.filter = "blur(0px)"
+  
+}
+
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
 
@@ -48,3 +57,5 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+
