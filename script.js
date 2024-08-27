@@ -23,9 +23,23 @@ function unTouch() {
 function seeCer(){
 
   const backgroundImg = document.getElementById('ImgBox');
+  const coupleImg = document.getElementById('DirCou');
+  const LT1 = document.getElementById('LT1');
+  const LT2 = document.getElementById('LT2');
+  const LT3 = document.getElementById('LT3');
+  const BB1 = document.getElementById('BB1');
 
   backgroundImg.style.scale = 1;
   backgroundImg.style.filter = "blur(0px)"
+
+  coupleImg.style.opacity = 0;
+  coupleImg.style.scale = 0.96;
+
+  LT1.style.animation = "vanish 1s forwards";
+  LT2.style.animation = "vanish 1s forwards";
+  LT3.style.animation = "vanish 1s forwards";
+  BB1.style.animation = "vanishGrid 1s forwards";
+
   
 }
 
