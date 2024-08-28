@@ -28,6 +28,7 @@ function seeCer(){
   const LT2 = document.getElementById('LT2');
   const LT3 = document.getElementById('LT3');
   const BB1 = document.getElementById('BB1');
+  const DI = document.getElementById('DI');
 
   backgroundImg.style.scale = 1;
   backgroundImg.style.filter = "blur(0px)"
@@ -39,6 +40,7 @@ function seeCer(){
   LT2.style.animation = "vanish 0.8s 0.2s forwards";
   LT3.style.animation = "vanish 0.8s 0.4s forwards";
   BB1.style.animation = "vanishGrid 0.8s 0.4s forwards";
+  DI.style.zIndex = 0;
 
   
 }
