@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>Invitación M&B</title>
 </head>
 <body>
@@ -211,30 +210,30 @@
 
       <div id="dirCer" class="directionCeremony">
         <div class="iconBox">
-          <img class="iconCer" src="svg/churchIcon.svg" alt="">
+          <img id="ltI1" class="disapear iconCer" src="svg/churchIcon.svg" alt="">
         </div>
         
         <div class="directionCard">
           <div class="directionTitles">
-            <span class="lt2">Parroquia</span>
-            <span class="lt3">Nuestra Señora de &nbsp&nbsp San Juan<br>de los Lagos</span>  
+            <span  id="ltC1" class="disapear lt2">Parroquia</span>
+            <span id="ltC2" class="disapear lt3">Nuestra Señora de &nbsp&nbsp San Juan<br>de los Lagos</span>  
           </div>
-          <div class="startHour"><span class="lt3">Hora de inicio: 4:00pm</span></div>
+          <div class="startHour"><span id="ltH" class="disapear lt3">Hora de inicio: 4:00pm</span></div>
           <div class="iconBox2">
-            <img  class="iconCer" src="svg/locationIcon.svg" alt="">
+            <img id="ltI2" class="disapear iconCer" src="svg/locationIcon.svg" alt="">
           </div>
           <div class="adress">
-            <span class="lt3">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
+            <span id="ltC3" class="disapear lt3">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
           </div>
           <div class="mapButtonBox">
-            <a class="dirBtn" id="cerBtn2" href="#">VER EN MAPS</a>
+            <a id="ltDB" class="disapear dirBtn" href="#">VER EN MAPS</a>
           </div>
           <div class="direction-returnBtn">
-            <button class="returnBtn" type="button">×</button>
+            <button id="ltRB" class="disapear returnBtn" type="button">×</button>
           </div>
         </div>
       </div>
   </div>
-
+  <script src="script.js"></script>
 </body>
 </html>

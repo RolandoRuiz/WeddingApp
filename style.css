@@ -912,12 +912,13 @@ body{
 }
 
 .directionIntro{
+
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 10;
     grid-row-end: 15;
-    display: grid;
+    display: none;
     justify-items: center;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
@@ -1046,27 +1047,20 @@ body{
 /*Separación a segunda tarjeta*/
 
 .directionCeremony{
+    display: grid;
     width: 100%;
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 8;
     grid-row-end: 15;
-    display: none;
     justify-items: center;
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: 1fr;
     z-index: 5;
 }
 
-@keyframes appearGrid{
-    from{
-        display: none;
-        opacity: 0;
-    }
-    to{
-        display: grid;
-        opacity: 1;
-    }
+.appear{
+    display: grid;
 }
 
 .iconBox{
@@ -1226,5 +1220,18 @@ body{
     border: 3px solid var(--MainBgColor);
     color: var(--MainBgColor);
     font-size: 1.5em;
+    cursor: pointer;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.9;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
