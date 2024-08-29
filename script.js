@@ -42,6 +42,10 @@ function seeCer(){
   BB1.style.animation = "vanishGrid 0.8s 0.4s forwards";
   DI.style.zIndex = 0;
 
+  const directionCer = document.getElementById('dirCer');
+
+  directionCer.style.animation = "appearGrid 1s 1s forwards";
+
   
 }
 
