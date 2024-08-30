@@ -1,26 +1,50 @@
-function onTouch() {
-    const closeCircle = document.getElementById('hamCircle');
+// Set the date we're counting down to
+var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
 
-    closeCircle.classList.add('hamCircleFocus');
+// Update the count down every 1 second
+var x = setInterval(function() {
 
-    const openCross = document.getElementById('hamCross');
+  // Get today's date and time
+  var now = new Date().getTime();
 
-    openCross.classList.add('hamCrossFocus');
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
 
-}
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-function unTouch() {
-    const closeCircle = document.getElementById('hamCircle');
+  // Display the result in the element with id="demo"
+  document.getElementById("dateCounter").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
 
-    closeCircle.classList.remove('hamCircleFocus');
-
-    const openCross = document.getElementById('hamCross');
-
-    openCross.classList.remove('hamCrossFocus');
-
-}
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
 
 /*
+const openCard = document.getElementsByClassName('openBtn');
+var i = 0;
+
+function openInfoCard(){
+
+  if(openCard.classList.contains = 'openCer'){
+    console.log("i=1");
+  }else if(openCard.classList.contains = 'openPar'){
+    console.log("i=2");
+  }
+}
+
+for (i; i < openCard.length; i++) {
+  openCard[i].addEventListener('click', openInfoCard, false);
+}
+
+
 function seeCer(){
 
   const backgroundImg = document.getElementById('ImgBox');
@@ -61,19 +85,19 @@ function seeCer(){
 }
 */
 
-const rtnBtn = document.getElementById('ltRB');
+/*const closeBtn = document.getElementById('closeBtn');
+const dirCer = document.getElementById('dirCer');
+const dirPar = document.getElementById('dirPar');
 
 function returnToStart(){
-  const dirCer = document.getElementById('dirCer');
-  const dirPar = document.getElementById('dirPar');
   
   if (dirCer){
     console.log("Correct");
-    var disappear = document.querySelectorAll(".disapear");
+    var closeDirCer = document.querySelectorAll(".closeDir");
 
-    for(var i=0; i<disappear.length; i++){
+    for(var i=0; i<closeDirCer.length; i++){
       (function (i) {
-        setTimeout(function () {disappear[i].style.animation = "vanishGrid 0.8s forwards"},i*15)
+        setTimeout(function () {closeDirCer[i].style.animation = "vanishGrid 0.8s forwards"},i*15)
     }(i))
     }
 
@@ -83,38 +107,50 @@ function returnToStart(){
 
 }
 
-rtnBtn.addEventListener('click', returnToStart);
+closeBtn.addEventListener('click', returnToStart);
+*/
 
+const dirCer = document.getElementById('dirCer');
+const dirPar = document.getElementById('dirPar');
 
+const closeCer = document.getElementById('closeDirCer');
 
-
-// Set the date we're counting down to
-var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("dateCounter").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+function closeCerInfo(){
+  
+  if (dirCer) {
+    console.log("Correct");
+    var closingCer = document.querySelectorAll(".closeCer");
+  
+    for(var i=0; i<closingCer.length; i++){
+      (function (i) {
+        setTimeout(function () {closingCer[i].style.animation = "vanishGrid 0.8s forwards"},i*15)
+      }(i))
+    }
+  
   }
-}, 1000);
+}
+
+closeCer.addEventListener('click', closeCerInfo);
+
+
+const closePar = document.getElementById('closeDirPar');
+
+function closeParInfo(){
+
+  if (dirPar) {
+    console.log("Correct 2");
+    var closingPar = document.querySelectorAll(".closePar");
+
+    for(var i=0; i<closingPar.length; i++){
+      (function (i) {
+        setTimeout(function () {closingPar[i].style.animation = "vanishGrid 0.8s forwards"},i*15)
+      }(i))
+    }
+  }
+
+}
+
+closePar.addEventListener('click', closeParInfo);
+
 
 
