@@ -27,6 +27,55 @@ var x = setInterval(function() {
   }
 }, 1000);
 
+
+ const openCelebration = document.getElementById('openCer');
+ const openParty = document.getElementById('openPar');
+ const closeDirMenu = document.querySelectorAll('.closeMenu');
+ const dirIntro = document.getElementById('dirIntro');
+ const dirCer = document.getElementById('dirCer');
+ const openCerCard = document.getElementsByClassName('cerCard');
+ const backgroundImg = document.getElementById('ImgBox');
+const coupleImg = document.getElementById('DirCou');
+
+
+ function closeMenu(){
+  console.log('Cerrando Menu');
+
+  backgroundImg.style.scale = 1;
+  backgroundImg.style.filter = "blur(0px)"
+
+  coupleImg.style.opacity = 0;
+  coupleImg.style.scale = 0.90;
+  coupleImg.style.filter = "blur(10px)";
+  
+  for(var i=0; i<closeDirMenu.length; i++){
+    (function (i) {
+      setTimeout(function () {closeDirMenu[i].style.animation = "vanishGrid 0.3s forwards ease-in"},i*100);
+    }(i))
+    dirIntro.style.zIndex = 0;
+  }
+ }
+
+ function openCer(){
+  closeMenu();
+
+  dirCer.style.zIndex = 5;
+
+  for(var i=0; i<openCerCard.length; i++){
+    (function (i) {
+      setTimeout(function () {openCerCard[i].style.animation = "appearCard 0.8s 0.2s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
+    }(i))
+  }
+  
+ }
+
+ function openPar(){
+  closeMenu();
+ }
+
+ openCelebration.addEventListener('click', openCer);
+ openParty.addEventListener('click', openPar);
+
 /*
 const openCard = document.getElementsByClassName('openBtn');
 var i = 0;
@@ -109,7 +158,7 @@ function returnToStart(){
 
 closeBtn.addEventListener('click', returnToStart);
 */
-
+/*
 const dirCer = document.getElementById('dirCer');
 const dirPar = document.getElementById('dirPar');
 
@@ -151,6 +200,6 @@ function closeParInfo(){
 }
 
 closePar.addEventListener('click', closeParInfo);
-
+*/
 
 

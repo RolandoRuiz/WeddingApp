@@ -195,67 +195,67 @@
         <img class="directionImgBox" id="ImgBox" src="img/churchBgr.jpg" alt="">
       </div>
 
-      <div  id="DI" class="directionIntro">
+      <div  id="dirIntro" class="directionIntro">
         <div class="dir-introTitles">
-          <span id="LT1" class="lt1">Conoce donde será</span>
-          <span id="LT2" class="lt2">Consagrado</span>
-          <span id="LT3" class="lt3">nuestro enlace &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp matrimonial</span>
+          <span class="lt1 closeMenu">Conoce donde será</span>
+          <span class="lt2 closeMenu">Consagrado</span>
+          <span class="lt3 closeMenu">nuestro enlace &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp matrimonial</span>
         </div>
-        <div id="BB1" class="dir-ButtonBox">
-          <button class="dirBtn" id="cerBtn" type="button" onclick="seeCer();">CEREMONIA</button>
+        <div id="BB1" class="dir-ButtonBox closeMenu">
+          <button class="dirBtn" id="openCer" type="button">CEREMONIA</button>
           <div class="divider"></div>
-          <button class="dirBtn" type="button">RECEPCIÓN</button>
+          <button class="dirBtn" id="openPar" type="button">RECEPCIÓN</button>
         </div>
       </div>
 
       <div id="dirCer" class="directionCeremony">
         <div class="iconBox">
-          <img id="ltI1" class="closeCer iconCer" src="svg/churchIcon.svg" alt="">
+          <img id="ltI1" class="closeCer iconCer cerCard" src="svg/churchIcon.svg" alt="">
         </div>
         
         <div class="directionCard">
           <div class="directionTitles">
-            <span  id="ltC1" class="closeCer lt2">Parroquia</span>
-            <span id="ltC2" class="closeCer lt3">Nuestra Señora de &nbsp&nbsp San Juan<br>de los Lagos</span>  
+            <span  id="ltC1" class="closeCer lt2 cerCard">Parroquia</span>
+            <span id="ltC2" class="closeCer lt3 cerCard">Nuestra Señora de &nbsp&nbsp San Juan<br>de los Lagos</span>  
           </div>
-          <div class="startHour"><span id="ltH" class="closeCer lt3">Hora de inicio: 4:00pm</span></div>
+          <div class="startHour"><span id="ltH" class="closeCer lt3 cerCard">Hora de inicio: 4:00pm</span></div>
           <div class="iconBox2">
-            <img id="ltI2" class="closeCer iconCer" src="svg/locationIcon.svg" alt="">
+            <img id="ltI2" class="closeCer iconCer cerCard" src="svg/locationIcon.svg" alt="">
           </div>
           <div class="adress">
-            <span id="ltC3" class="closeCer lt3">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
+            <span id="ltC3" class="closeCer lt3 cerCard">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
           </div>
           <div class="mapButtonBox">
-            <a id="ltDB" class="closeCer dirBtn" href="#">VER EN MAPS</a>
+            <a id="ltDB" class="closeCer dirBtn cerCard" href="#">VER EN MAPS</a>
           </div>
           <div class="direction-returnBtn">
-            <button id="closeDirCer" class="closeCer returnBtn" type="button">×</button>
+            <button id="closeDirCer" class="closeCer returnBtn cerCard" type="button">×</button>
           </div>
         </div>
       </div>
 
       <div id="dirPar" class="directionCeremony">
         <div class="iconBox">
-          <img id="ltI1" class="disapear iconCer" src="svg/receptionIcon.svg" alt="">
+          <img id="ltI1" class="disapear iconCer parCard" src="svg/receptionIcon.svg" alt="">
         </div>
         
         <div class="directionCard">
           <div class="directionTitles">
-            <span  id="ltC1" class="disapear lt2">Club</span>
-            <span id="ltC2" class="disapear lt3">Río Recepciones</span>  
+            <span  id="ltC1" class="disapear lt2 parCard">Club</span>
+            <span id="ltC2" class="disapear lt3 parCard">Río Recepciones</span>  
           </div>
-          <div class="startHour"><span id="ltH" class="disapear lt3">Hora de inicio: 4:00pm</span></div>
+          <div class="startHour"><span id="ltH" class="disapear lt3 parCard">Hora de inicio: 4:00pm</span></div>
           <div class="iconBox2">
-            <img id="ltI2" class="disapear iconCer" src="svg/locationIcon.svg" alt="">
+            <img id="ltI2" class="disapear iconCer parCard" src="svg/locationIcon.svg" alt="">
           </div>
           <div class="adress">
-            <span id="ltC3" class="disapear lt3">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
+            <span id="ltC3" class="disapear lt3 parCard">Avenida México y las Américas<br>Fracc. Río Bravo C.P. 88990<br>Cd. Río Bravo , Tamaulipas </span>
           </div>
           <div class="mapButtonBox">
-            <a id="ltDB" class="disapear dirBtn" href="#">VER EN MAPS</a>
+            <a id="ltDB" class="disapear dirBtn parCard" href="#">VER EN MAPS</a>
           </div>
           <div class="direction-returnBtn">
-            <button id="closeDirPar" class="disapear returnBtn" type="button">×</button>
+            <button id="closeDirPar" class="disapear returnBtn parCard" type="button">×</button>
           </div>
         </div>
       </div>

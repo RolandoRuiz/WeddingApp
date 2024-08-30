@@ -889,7 +889,7 @@ body{
     scale 1s,
     filter 1.2s;
     transition-timing-function: ease-in-out;
-    transition-delay: 0.4s;
+    transition-delay: 0.3s;
 }
 
 
@@ -906,9 +906,10 @@ body{
 
     transition:
     scale 0.6s,
-    opacity 0.7s;
-    transition-timing-function: linear;
-    transition-delay: 0.25s;
+    opacity 0.5s,
+    filter 0.4s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
 }
 
 .directionIntro{
@@ -918,7 +919,7 @@ body{
     grid-column-end: 2;
     grid-row-start: 10;
     grid-row-end: 15;
-    display: none;
+    display: grid;
     justify-items: center;
     grid-template-rows: repeat(5, 1fr);
     grid-template-columns: 1fr;
@@ -989,15 +990,15 @@ body{
 
 @keyframes vanishGrid{
     from{
-        display: grid;
         opacity: 1;
         scale: 1;
+        filter: blur(0px);
     }
 
     to{
-        display: none;
         opacity: 0;
         scale: 0.90;
+        filter: blur(5px);
     }
 }
 
@@ -1046,6 +1047,16 @@ body{
 
 /*Separación a segunda tarjeta*/
 
+.cerCard{
+    opacity: 0;
+    scale: 0.95;
+}
+
+.parCard{
+    opacity: 0;
+    scale: 0.95;
+}
+
 .directionCeremony{
     display: grid;
     width: 100%;
@@ -1056,7 +1067,7 @@ body{
     justify-items: center;
     grid-template-rows: repeat(15, 1fr);
     grid-template-columns: 1fr;
-    z-index: 5;
+    z-index: 0;
 }
 
 .appear{
@@ -1223,10 +1234,10 @@ body{
     cursor: pointer;
 }
 
-@keyframes appear{
+@keyframes appearCard{
     from{
         opacity: 0;
-        scale: 0.9;
+        scale: 0.95;
     }
 
     to{
