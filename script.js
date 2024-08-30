@@ -33,20 +33,15 @@ var x = setInterval(function() {
  const closeDirMenu = document.querySelectorAll('.closeMenu');
  const dirIntro = document.getElementById('dirIntro');
  const dirCer = document.getElementById('dirCer');
+ const dirPar = document.getElementById('dirPar');
  const openCerCard = document.getElementsByClassName('cerCard');
+ const openParCard = document.getElementsByClassName('parCard');
  const backgroundImg = document.getElementById('ImgBox');
 const coupleImg = document.getElementById('DirCou');
 
 
  function closeMenu(){
   console.log('Cerrando Menu');
-
-  backgroundImg.style.scale = 1;
-  backgroundImg.style.filter = "blur(0px)"
-
-  coupleImg.style.opacity = 0;
-  coupleImg.style.scale = 0.90;
-  coupleImg.style.filter = "blur(10px)";
   
   for(var i=0; i<closeDirMenu.length; i++){
     (function (i) {
@@ -58,6 +53,13 @@ const coupleImg = document.getElementById('DirCou');
 
  function openCer(){
   closeMenu();
+
+  backgroundImg.style.scale = 1;
+  backgroundImg.style.filter = "blur(0px)"
+
+  coupleImg.style.opacity = 0;
+  coupleImg.style.scale = 0.90;
+  coupleImg.style.filter = "blur(10px)";
 
   dirCer.style.zIndex = 5;
 
@@ -71,6 +73,14 @@ const coupleImg = document.getElementById('DirCou');
 
  function openPar(){
   closeMenu();
+
+  dirPar.style.zIndex = 5;
+
+  for(var i=0; i<openParCard.length; i++){
+    (function (i) {
+      setTimeout(function () {openParCard[i].style.animation = "appearCard 0.8s 0.2s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
+    }(i))
+  }
  }
 
  openCelebration.addEventListener('click', openCer);
