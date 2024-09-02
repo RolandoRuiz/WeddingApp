@@ -53,27 +53,17 @@ const closeDirCer = document.getElementById('closeCer');
   }
  }
 
- function openMenu(){
-  console.log('Abriendo Menu');
-
-  for(var i=0; i<closeDirMenu.length; i++){
-    (function (i) {
-      setTimeout(function () {closeDirMenu[i].style.animation = "appearGrid 0.3s forwards ease-in"},i*100);
-    }(i))
-    dirIntro.style.zIndex = 1;
-  }
- }
-
  function openCer(){
   closeMenu();
 
   backgroundImg.style.scale = 1;
-  backgroundImg.style.filter = "blur(0px)"
-  backgroundImg.style.transform = "translateY(0px)"
+  backgroundImg.style.filter = "blur(0px)";
+  backgroundImg.style.transform = "translateY(0px)";
 
   coupleImg.style.opacity = 0;
   coupleImg.style.scale = 0.90;
   coupleImg.style.filter = "blur(10px)";
+  coupleImg.style.transitionDelay = "0s";
 
   dirCer.style.zIndex = 5;
 
@@ -82,25 +72,40 @@ const closeDirCer = document.getElementById('closeCer');
       setTimeout(function () {openCerCard[i].style.animation = "appearCard 0.8s 0.2s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
     }(i))
   }
-  
+ }
+
+ function openMenu(){
+  console.log('Abriendo Menu');
+
+  for(var i=0; i<closeDirMenu.length; i++){
+    (function (i) {
+      setTimeout(function ()
+      {closeDirMenu[i].style.animation = "appearGrid 0.3s 1s backwards ease-in";
+      },i*100);
+    }(i))
+    dirIntro.style.zIndex = 1;
+  }
  }
 
  function closeCer(){
   openMenu();
 
   backgroundImg.style.scale = 2.8;
-  backgroundImg.style.filter = "blur(2px)"
-  backgroundImg.style.transform = "translateY(-150px)"
+  backgroundImg.style.filter = "blur(2px)";
+  backgroundImg.style.transform = "translateY(-150px)";
 
   coupleImg.style.opacity = 1;
   coupleImg.style.scale = 1;
   coupleImg.style.filter = "blur(0px)";
+  coupleImg.style.transitionDelay = "0.5s";
 
   dirCer.style.zIndex = 0;
 
   for(var i=0; i<openCerCard.length; i++){
     (function (i) {
-      setTimeout(function() {openCerCard[i].style.animation = "VanishCard 1s 0.5s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
+      setTimeout(function()
+      {openCerCard[i].style.animation = "VanishCard 0.8s 0.2s backwards cubic-bezier(.57,.23,.52,2.22)";
+      },i*100);
       console.log('does repeat?');
     }(i))
   }
@@ -114,6 +119,30 @@ const closeDirCer = document.getElementById('closeCer');
   for(var i=0; i<openParCard.length; i++){
     (function (i) {
       setTimeout(function () {openParCard[i].style.animation = "appearCard 0.8s 0.2s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
+    }(i))
+  }
+ }
+
+ function closePar(){
+  openMenu();
+
+  backgroundImg.style.scale = 2.8;
+  backgroundImg.style.filter = "blur(2px)";
+  backgroundImg.style.transform = "translateY(-150px)";
+
+  coupleImg.style.opacity = 1;
+  coupleImg.style.scale = 1;
+  coupleImg.style.filter = "blur(0px)";
+  coupleImg.style.transitionDelay = "0.5s";
+
+  dirCer.style.zIndex = 0;
+
+  for(var i=0; i<openCerCard.length; i++){
+    (function (i) {
+      setTimeout(function()
+      {openCerCard[i].style.animation = "VanishCard 0.8s 0.2s backwards cubic-bezier(.57,.23,.52,2.22)";
+      },i*100);
+      console.log('does repeat?');
     }(i))
   }
  }
