@@ -36,9 +36,11 @@ const dirCer = document.getElementById('dirCer');
 const dirPar = document.getElementById('dirPar');
 const openCerCard = document.getElementsByClassName('cerCard');
 const openParCard = document.getElementsByClassName('parCard');
-const backgroundImg = document.getElementById('ImgBox');
+const backgroundImg = document.getElementById('ImgCer');
+const backgroundImg2 = document.getElementById('ImgPar');
 const coupleImg = document.getElementById('DirCou');
 const closeDirCer = document.getElementById('closeCer');
+const closeDirPar = document.getElementById('closePar');
 
 
 
@@ -50,6 +52,19 @@ const closeDirCer = document.getElementById('closeCer');
       setTimeout(function () {closeDirMenu[i].style.animation = "vanishGrid 0.3s forwards ease-in"},i*100);
     }(i))
     dirIntro.style.zIndex = 0;
+  }
+ }
+
+ function openMenu(){
+  console.log('Abriendo Menu');
+
+  for(var i=0; i<closeDirMenu.length; i++){
+    (function (i) {
+      setTimeout(function ()
+      {closeDirMenu[i].style.animation = "appearGrid 0.3s 1s backwards ease-in";
+      },i*100);
+    }(i))
+    dirIntro.style.zIndex = 1;
   }
  }
 
@@ -71,19 +86,6 @@ const closeDirCer = document.getElementById('closeCer');
     (function (i) {
       setTimeout(function () {openCerCard[i].style.animation = "appearCard 0.8s 0.2s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
     }(i))
-  }
- }
-
- function openMenu(){
-  console.log('Abriendo Menu');
-
-  for(var i=0; i<closeDirMenu.length; i++){
-    (function (i) {
-      setTimeout(function ()
-      {closeDirMenu[i].style.animation = "appearGrid 0.3s 1s backwards ease-in";
-      },i*100);
-    }(i))
-    dirIntro.style.zIndex = 1;
   }
  }
 
@@ -114,7 +116,17 @@ const closeDirCer = document.getElementById('closeCer');
  function openPar(){
   closeMenu();
 
+  coupleImg.style.opacity = 0;
+  coupleImg.style.scale = 0.90;
+  coupleImg.style.filter = "blur(10px)";
+  coupleImg.style.transitionDelay = "0s";
+
   dirPar.style.zIndex = 5;
+
+  backgroundImg2.style.animation = "moveLeft 0.8s forwards cubic-bezier(.73,.85,.7,1.03)";
+  backgroundImg2.style.scale = "1.2";
+  backgroundImg2.style.opacity = "1";
+  backgroundImg2.style.filter = "blur(0px)";
 
   for(var i=0; i<openParCard.length; i++){
     (function (i) {
@@ -126,21 +138,22 @@ const closeDirCer = document.getElementById('closeCer');
  function closePar(){
   openMenu();
 
-  backgroundImg.style.scale = 2.8;
-  backgroundImg.style.filter = "blur(2px)";
-  backgroundImg.style.transform = "translateY(-150px)";
-
   coupleImg.style.opacity = 1;
   coupleImg.style.scale = 1;
   coupleImg.style.filter = "blur(0px)";
   coupleImg.style.transitionDelay = "0.5s";
 
-  dirCer.style.zIndex = 0;
+  dirPar.style.zIndex = 0;
 
-  for(var i=0; i<openCerCard.length; i++){
+  backgroundImg2.style.animation = "moveRight 0.6s 0.6s backwards cubic-bezier(.73,.85,.7,1.03)";
+  backgroundImg2.style.scale = "1";
+  backgroundImg2.style.opacity = "0";
+  backgroundImg2.style.filter = "blur(10px)";
+
+  for(var i=0; i<openParCard.length; i++){
     (function (i) {
       setTimeout(function()
-      {openCerCard[i].style.animation = "VanishCard 0.8s 0.2s backwards cubic-bezier(.57,.23,.52,2.22)";
+      {openParCard[i].style.animation = "VanishCard 0.2s 0.2s backwards cubic-bezier(.57,.23,.52,1.8)";
       },i*100);
       console.log('does repeat?');
     }(i))
@@ -150,6 +163,7 @@ const closeDirCer = document.getElementById('closeCer');
  openCelebration.addEventListener('click', openCer);
  openParty.addEventListener('click', openPar);
  closeDirCer.addEventListener('click', closeCer);
+ closeDirPar.addEventListener('click', closePar);
 
 /*
 const openCard = document.getElementsByClassName('openBtn');
