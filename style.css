@@ -881,13 +881,14 @@ body{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center -100px;
-    scale: 2;
+    transform: translateY(-150px);
+    scale: 2.8;
     filter: blur(2px);
 
     transition:
     scale 1s,
-    filter 1.2s;
+    filter 1.2s,
+    transform 1s;
     transition-timing-function: ease-in-out;
     transition-delay: 0.3s;
 }
@@ -1002,6 +1003,20 @@ body{
     }
 }
 
+@keyframes appearGrid{
+    from{
+        opacity: 0;
+        scale: 0.90;
+        filter: blur(5px);
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+        filter: blur(0px);
+    }
+}
+
 .dir-ButtonBox{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -1010,8 +1025,8 @@ body{
     width: 85%;
     position: relative;
     display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     align-items: center;
     scale: 1;
@@ -1055,6 +1070,32 @@ body{
 .parCard{
     opacity: 0;
     scale: 0.95;
+}
+
+.aftCard{
+    opacity: 0;
+    scale: 0.95;
+}
+
+#openCer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#openPar{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#openAft{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 .directionCeremony{
@@ -1120,6 +1161,8 @@ body{
     grid-template-rows: repeat(3, 1fr);
 }
 
+
+
 .directionTitles > .lt2{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -1129,9 +1172,6 @@ body{
     line-height: 0.5em;
     left: 1%;
     bottom: 5%;z-index: 1;
-}
-
-.directionCard > .dT1{
 }
 
 .directionTitles > .lt3{
@@ -1153,11 +1193,15 @@ body{
     position: relative;
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start: 9;
+    grid-row-start: 6;
     grid-row-end: 10;
     justify-self: center;
     align-items: end;
     font-weight: thin;
+}
+
+#ltH{
+    align-items: center;
 }
 
 .startHour > .lt3{
@@ -1247,6 +1291,18 @@ body{
     to{
         opacity: 1;
         scale: 1;
+    }
+}
+
+@keyframes VanishCard{
+    from{
+        opacity: 1;
+        scale: 1;
+    }
+
+    to{
+        opacity: 0;
+        scale: 0.95;
     }
 }
 

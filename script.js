@@ -28,16 +28,18 @@ var x = setInterval(function() {
 }, 1000);
 
 
- const openCelebration = document.getElementById('openCer');
- const openParty = document.getElementById('openPar');
- const closeDirMenu = document.querySelectorAll('.closeMenu');
- const dirIntro = document.getElementById('dirIntro');
- const dirCer = document.getElementById('dirCer');
- const dirPar = document.getElementById('dirPar');
- const openCerCard = document.getElementsByClassName('cerCard');
- const openParCard = document.getElementsByClassName('parCard');
- const backgroundImg = document.getElementById('ImgBox');
+const openCelebration = document.getElementById('openCer');
+const openParty = document.getElementById('openPar');
+const closeDirMenu = document.querySelectorAll('.closeMenu');
+const dirIntro = document.getElementById('dirIntro');
+const dirCer = document.getElementById('dirCer');
+const dirPar = document.getElementById('dirPar');
+const openCerCard = document.getElementsByClassName('cerCard');
+const openParCard = document.getElementsByClassName('parCard');
+const backgroundImg = document.getElementById('ImgBox');
 const coupleImg = document.getElementById('DirCou');
+const closeDirCer = document.getElementById('closeCer');
+
 
 
  function closeMenu(){
@@ -51,11 +53,23 @@ const coupleImg = document.getElementById('DirCou');
   }
  }
 
+ function openMenu(){
+  console.log('Abriendo Menu');
+
+  for(var i=0; i<closeDirMenu.length; i++){
+    (function (i) {
+      setTimeout(function () {closeDirMenu[i].style.animation = "appearGrid 0.3s forwards ease-in"},i*100);
+    }(i))
+    dirIntro.style.zIndex = 1;
+  }
+ }
+
  function openCer(){
   closeMenu();
 
   backgroundImg.style.scale = 1;
   backgroundImg.style.filter = "blur(0px)"
+  backgroundImg.style.transform = "translateY(0px)"
 
   coupleImg.style.opacity = 0;
   coupleImg.style.scale = 0.90;
@@ -69,6 +83,27 @@ const coupleImg = document.getElementById('DirCou');
     }(i))
   }
   
+ }
+
+ function closeCer(){
+  openMenu();
+
+  backgroundImg.style.scale = 2.8;
+  backgroundImg.style.filter = "blur(2px)"
+  backgroundImg.style.transform = "translateY(-150px)"
+
+  coupleImg.style.opacity = 1;
+  coupleImg.style.scale = 1;
+  coupleImg.style.filter = "blur(0px)";
+
+  dirCer.style.zIndex = 0;
+
+  for(var i=0; i<openCerCard.length; i++){
+    (function (i) {
+      setTimeout(function() {openCerCard[i].style.animation = "VanishCard 1s 0.5s forwards cubic-bezier(.57,.23,.52,2.22)"},i*100);
+      console.log('does repeat?');
+    }(i))
+  }
  }
 
  function openPar(){
@@ -85,6 +120,7 @@ const coupleImg = document.getElementById('DirCou');
 
  openCelebration.addEventListener('click', openCer);
  openParty.addEventListener('click', openPar);
+ closeDirCer.addEventListener('click', closeCer);
 
 /*
 const openCard = document.getElementsByClassName('openBtn');
