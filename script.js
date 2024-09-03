@@ -105,7 +105,7 @@ const closeDirAft = document.getElementById('closeAft');
   coupleImg.style.filter = "blur(0px)";
   coupleImg.style.transitionDelay = "0.5s";
 
-  dirCer.style.zIndex = -1;
+  dirCer.style.zIndex = 0;
 
   for(var i=0; i<openCerCard.length; i++){
     (function (i) {
@@ -147,7 +147,7 @@ const closeDirAft = document.getElementById('closeAft');
   coupleImg.style.filter = "blur(0px)";
   coupleImg.style.transitionDelay = "0.5s";
 
-  dirPar.style.zIndex = -1;
+  dirPar.style.zIndex = 0;
 
   backgroundImg2.style.animation = "moveRight 0.6s 0.6s backwards cubic-bezier(.73,.85,.7,1.03)";
   backgroundImg2.style.scale = "1";
@@ -194,7 +194,7 @@ const closeDirAft = document.getElementById('closeAft');
   coupleImg.style.filter = "blur(0px)";
   coupleImg.style.transitionDelay = "0.5s";
 
-  dirAft.style.zIndex = -1;
+  dirAft.style.zIndex = 0;
 
   backgroundImg3.style.animation = "moveRight 0.6s 0.6s backwards cubic-bezier(.73,.85,.7,1.03)";
   backgroundImg3.style.scale = "1";
