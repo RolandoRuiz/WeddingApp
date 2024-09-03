@@ -719,7 +719,7 @@ body{
     height: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
     justify-items: center;
 }
 
@@ -751,16 +751,23 @@ body{
 .actIcon{
     width: 90%;
     height: 100%;
-    background-color: #1e1e1e;
+    display: grid;
+    justify-content: center;
+    align-items: center;
     grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 1; grid-row-end: 2;
+    grid-row-start: 1; grid-row-end: 3;
+}
+
+.aIcon{
+    height: 2.4em;
+    object-fit: contain;
 }
 
 .actTitle{
     width: 90%;
     height: 100%;
     grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 2; grid-row-end: 3;
+    grid-row-start: 3; grid-row-end: 4;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -771,7 +778,6 @@ body{
     font-family: MirageMedium;
     font-size: 1.5em;
     position: absolute;
-    top: 18%;
 }
 
 .actDivider{
@@ -779,7 +785,7 @@ body{
     height: 2%;
     display: grid;
     grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 1; grid-row-end: 3;
+    grid-row-start: 1; grid-row-end: 4;
     background-color: #3e3e3e;
     align-self: self-end;
 
@@ -789,7 +795,7 @@ body{
     width: 90%;
     height: 100%;
     grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 3; grid-row-end: 4;
+    grid-row-start: 4; grid-row-end: 5;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -806,7 +812,7 @@ body{
     width: auto;
     height: 50%;
     grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 4; grid-row-end: 5;
+    grid-row-start: 5; grid-row-end: 6;
     align-self: self-end;
 }
 
