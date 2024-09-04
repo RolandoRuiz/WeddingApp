@@ -738,13 +738,13 @@ body{
     grid-column-start: 1; grid-column-end: 2;
 }
 
-.progressLineAnim{
+#progressLineAnim{
     height: 100%;
     width: 100%;
     background-color: red;
 }
 
-.progressStartDot{
+#progressStartDot{
     position: absolute;
     width: 15px;
     height: 15px;
@@ -753,7 +753,7 @@ body{
     border-radius: 100%;
 }
 
-.progressEndDot{
+#progressEndDot{
     position: absolute;
     width: 20px;
     height: 20px;

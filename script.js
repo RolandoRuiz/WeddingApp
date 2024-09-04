@@ -222,6 +222,7 @@ const closeDirAft = document.getElementById('closeAft');
 
  const scheduleSection = document.querySelector("#SchedSection"); //target object
  const displayTitles = document.querySelectorAll('.getSchedTitles');
+ const startDot = document.querySelector('proLine');
 
  const schedOptions = { //options for the observer (who is the observer, reduce its size with margin, how much do I need to activate it)
   root: null,
@@ -234,6 +235,7 @@ const closeDirAft = document.getElementById('closeAft');
     if(entry.isIntersecting){
       console.log(entry)
       displayTitles.forEach((title)=> {title.classList.add("showSchedTitles");});
+
     }
   })
  }
