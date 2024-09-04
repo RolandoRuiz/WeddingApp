@@ -217,3 +217,26 @@ const closeDirAft = document.getElementById('closeAft');
  closeDirPar.addEventListener('click', closePar);
  openAfterparty.addEventListener('click', openAft);
  closeDirAft.addEventListener('click', closeAft);
+
+ /*Interserction Observer for schedule section*/
+
+ const scheduleSection = document.querySelector("#SchedSection"); //target object
+ const displayTitles = document.querySelectorAll('.getSchedTitles');
+
+ const schedOptions = { //options for the observer (who is the observer, reduce its size with margin, how much do I need to activate it)
+  root: null,
+  rootMargin: "-30%",
+  threshold: 0,
+ }
+
+ const scheduleAnimation = (entries) =>{ //callback function
+    entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      console.log(entry)
+      displayTitles.forEach((title)=> {title.classList.add("showSchedTitles");});
+    }
+  })
+ }
+
+ const ScheduleObserver = new IntersectionObserver(scheduleAnimation, schedOptions)
+ ScheduleObserver.observe(scheduleSection);
