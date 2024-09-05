@@ -223,6 +223,9 @@ const closeDirAft = document.getElementById('closeAft');
  const scheduleSection = document.querySelector("#SchedSection"); //target object
  const displayTitles = document.querySelectorAll('.getSchedTitles');
  const getTimeline = document.querySelectorAll(".getTimeline");
+ const getActivities = document.querySelectorAll(".backDrop");
+ const getActContent = document.querySelectorAll(".showActElem");
+
 
  const schedOptions = { //options for the observer (who is the observer, reduce its size with margin, how much do I need to activate it)
   root: null,
@@ -242,9 +245,26 @@ const closeDirAft = document.getElementById('closeAft');
       getTimeline[1].classList.toggle("startLineAnim");
       getTimeline[2].classList.toggle("endDotAnim");
 
-      getTimeline.forEach((timelineobj) => {setTimeout(() => {
+      /*getTimeline.forEach((timelineobj) => {setTimeout(() => {
         timelineobj.style.backgroundColor = "#818181";
-      },6000);});
+      },6000);});*/
+
+
+      getActivities.forEach((activity, i) => {
+        setTimeout(() => {
+          activity.classList.toggle("showActivity");
+
+          getActContent.forEach((content) =>{
+            setTimeout(() => {
+              content.classList.add("showSchedTitles");
+            },2000);
+          });
+          
+
+        }, i*500);
+      });
+
+      ScheduleObserver.unobserve(scheduleSection);
     }
   })
  }
