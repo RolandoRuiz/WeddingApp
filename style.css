@@ -668,7 +668,6 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border: 4px solid red;
 }
 
 .ScheduleTitle{
@@ -683,16 +682,17 @@ body{
 }
 
 .showSchedTitles{
-    opacity: 1;
-    animation: StitleAppear 1s forwards cubic-bezier(.57,.23,.52,1.8);
+    animation: StitleAppear 0.7s forwards cubic-bezier(.57,.23,.52,1.8);
 }
 
 @keyframes StitleAppear {
     from{
         opacity: 0;
+        transform: translateY(-30px);
     }
     to{
         opacity: 1;
+        transform: translateY(0px);
     }
 }
 
@@ -710,7 +710,7 @@ body{
     position: absolute;
     font-family: MirageMedium;
     font-size: 1.7em;
-    line-height: 3em;
+    line-height: 2.8em;
     grid-row-start: 2; grid-row-end: 3;
     grid-column-start: 1; grid-column-end: 2;
     text-align: center;
@@ -724,42 +724,88 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    justify-items: center
+    justify-items: center;
 }
 
 .progressLine{
     position: relative;
     height: 100%;
     width: 0.6%;
-    background-color: #3e3e3e;
+    background-color: var(--MainBgColor);
     display: flex;
     justify-content: center;
     grid-row-start: 1; grid-row-end: 2;
     grid-column-start: 1; grid-column-end: 2;
+    margin-bottom: 5%;
 }
 
-#progressLineAnim{
-    height: 100%;
+.getTimeline{
+    opacity: 0;
+    transition: background-color 0.2s ease-in;
+}
+
+.progressLineAnim{
+    height: 0%;
     width: 100%;
-    background-color: red;
-}
+    background-color: #3e3e3e;
 
-#progressStartDot{
+}
+.progressStartDot{
     position: absolute;
     width: 15px;
     height: 15px;
     background-color: #3e3e3e;
     top: 0%;
     border-radius: 100%;
+    scale: 0.5;
 }
 
-#progressEndDot{
+.progressEndDot{
     position: absolute;
     width: 20px;
     height: 20px;
     background-color: #3e3e3e;
     bottom: 0%;
     border-radius: 100%;
+}
+
+.startDotAnim{
+    animation: dotAppear 0.8s cubic-bezier(.57,.23,.52,3) forwards;
+    animation-delay: 1s;
+}
+
+.startLineAnim{
+    animation: lineAppear 2s ease-in forwards;
+    animation-delay: 1.5s;
+    opacity: 1;
+}
+
+.endDotAnim{
+    animation: dotAppear 0.8s cubic-bezier(.57,.23,.52,3) forwards;
+    animation-delay: 3.4s;
+    
+}
+
+
+@keyframes lineAppear {
+    from{
+        height: 0%;
+    }to{
+        height: 100%;
+    }
+}
+
+@keyframes dotAppear {
+    0%{
+        opacity: 0;
+        scale:0.5;
+    }60%{
+        opacity: 1;
+        scale:1.1;
+    }100%{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .activityBox{
@@ -786,6 +832,7 @@ body{
     justify-items: center;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
+    opacity: 0;
 }
 
 #act1{
@@ -829,7 +876,7 @@ body{
 }
 
 .aIcon{
-    height: 2em;
+    height: 3em;
     object-fit: contain;
 }
 

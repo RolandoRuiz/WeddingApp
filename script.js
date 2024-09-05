@@ -222,7 +222,7 @@ const closeDirAft = document.getElementById('closeAft');
 
  const scheduleSection = document.querySelector("#SchedSection"); //target object
  const displayTitles = document.querySelectorAll('.getSchedTitles');
- const startDot = document.querySelector('proLine');
+ const getTimeline = document.querySelectorAll(".getTimeline");
 
  const schedOptions = { //options for the observer (who is the observer, reduce its size with margin, how much do I need to activate it)
   root: null,
@@ -233,9 +233,18 @@ const closeDirAft = document.getElementById('closeAft');
  const scheduleAnimation = (entries) =>{ //callback function
     entries.forEach((entry)=>{
     if(entry.isIntersecting){
-      console.log(entry)
-      displayTitles.forEach((title)=> {title.classList.add("showSchedTitles");});
 
+      displayTitles.forEach((title,i) => {setTimeout(() => {
+        title.classList.add("showSchedTitles");
+      }, i*500);});
+      
+      getTimeline[0].classList.toggle("startDotAnim");
+      getTimeline[1].classList.toggle("startLineAnim");
+      getTimeline[2].classList.toggle("endDotAnim");
+
+      getTimeline.forEach((timelineobj) => {setTimeout(() => {
+        timelineobj.style.backgroundColor = "#818181";
+      },6000);});
     }
   })
  }
