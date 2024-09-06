@@ -245,11 +245,6 @@ const closeDirAft = document.getElementById('closeAft');
       getTimeline[1].classList.toggle("startLineAnim");
       getTimeline[2].classList.toggle("endDotAnim");
 
-      /*getTimeline.forEach((timelineobj) => {setTimeout(() => {
-        timelineobj.style.backgroundColor = "#818181";
-      },6000);});*/
-
-
       getActivities.forEach((activity, i) => {
         setTimeout(() => {
           activity.classList.toggle("showActivity");
@@ -274,17 +269,7 @@ const closeDirAft = document.getElementById('closeAft');
         });
       });
 
-      /*getActContent.forEach((content, i) =>{
-        setTimeout(() => {
-          content.classList.add("showSchedTitles");
-        },1000*(i+1));
-      });*/
-
-
       ScheduleObserver.unobserve(scheduleSection);
     }
   })
  }
-
- const ScheduleObserver = new IntersectionObserver(scheduleAnimation, schedOptions)
- ScheduleObserver.observe(scheduleSection);
