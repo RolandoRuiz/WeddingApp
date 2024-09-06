@@ -273,3 +273,40 @@ const closeDirAft = document.getElementById('closeAft');
     }
   })
  }
+
+ const ScheduleObserver = new IntersectionObserver(scheduleAnimation, schedOptions);
+ ScheduleObserver.observe(scheduleSection);
+
+
+  /*Interserction Observer for highlighting activities*/
+
+const getHighlight = document.querySelectorAll('.activityBgr');
+
+const hightlightOptions = {
+  root: null,
+  rootMargin: "-48%",
+  threshold: 0,
+}
+
+const showHightlight = (highlights) =>{
+  highlights.forEach((highlight) =>{
+
+
+    if (highlight.isIntersecting) {
+      highlight.target.classList.toggle('highlight')
+      highlight.target.classList.toggle("unfocus")
+    }else{
+      highlight.target.classList.remove("highlight")
+      highlight.target.classList.remove("unfocus")
+
+    }
+  }
+)}
+
+const hightlightObserver = new IntersectionObserver(showHightlight, hightlightOptions);
+
+getHighlight.forEach((Highlight) => { 
+  setInterval(() => {
+    hightlightObserver.observe(Highlight);
+  }, 6000);
+});
