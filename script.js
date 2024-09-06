@@ -253,16 +253,33 @@ const closeDirAft = document.getElementById('closeAft');
       getActivities.forEach((activity, i) => {
         setTimeout(() => {
           activity.classList.toggle("showActivity");
+        },520*(i+1));
 
-          getActContent.forEach((content) =>{
-            setTimeout(() => {
-              content.classList.add("showSchedTitles");
-            },2000);
-          });
-          
+        getActContent.forEach((content, i) =>{
 
-        }, i*500);
+          setTimeout(() =>{
+            if (getActContent[i].classList.contains('actIcon')) {
+              getActContent[i].classList.add('showContent');
+            }
+            else if (getActContent[i].classList.contains('aTitle')) {
+              getActContent[i].classList.add('showContent');
+            }
+            else if (getActContent[i].classList.contains('actDivider')) {
+              getActContent[i].classList.add('slideDivider');
+            }
+            else if (getActContent[i].classList.contains('aHour')) {
+              getActContent[i].classList.add('showContent');
+            }
+          },160*(i+1))
+        });
       });
+
+      /*getActContent.forEach((content, i) =>{
+        setTimeout(() => {
+          content.classList.add("showSchedTitles");
+        },1000*(i+1));
+      });*/
+
 
       ScheduleObserver.unobserve(scheduleSection);
     }
