@@ -49,7 +49,6 @@ const closeDirAft = document.getElementById('closeAft');
 
 
  function closeMenu(){
-  console.log('Cerrando Menu');
   
   for(var i=0; i<closeDirMenu.length; i++){
     (function (i) {
@@ -60,7 +59,6 @@ const closeDirAft = document.getElementById('closeAft');
  }
 
  function openMenu(){
-  console.log('Abriendo Menu');
 
   for(var i=0; i<closeDirMenu.length; i++){
     (function (i) {
@@ -112,7 +110,6 @@ const closeDirAft = document.getElementById('closeAft');
       setTimeout(function()
       {openCerCard[i].style.animation = "VanishCard 0.8s 0.2s backwards cubic-bezier(.57,.23,.52,2.22)";
       },i*100);
-      console.log('does repeat?');
     }(i))
   }
  }
@@ -159,7 +156,6 @@ const closeDirAft = document.getElementById('closeAft');
       setTimeout(function()
       {openParCard[i].style.animation = "VanishCard 0.2s 0.2s backwards cubic-bezier(.57,.23,.52,1.8)";
       },i*100);
-      console.log('does repeat?');
     }(i))
   }
  }
@@ -206,7 +202,6 @@ const closeDirAft = document.getElementById('closeAft');
       setTimeout(function()
       {openAftCard[i].style.animation = "VanishCard 0.2s 0.2s backwards cubic-bezier(.57,.23,.52,1.8)";
       },i*100);
-      console.log('does repeat?');
     }(i))
   }
  }
@@ -229,7 +224,7 @@ const closeDirAft = document.getElementById('closeAft');
 
  const schedOptions = { //options for the observer (who is the observer, reduce its size with margin, how much do I need to activate it)
   root: null,
-  rootMargin: "-30%",
+  rootMargin: "-35%",
   threshold: 0,
  }
 
