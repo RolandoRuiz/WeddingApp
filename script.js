@@ -262,6 +262,38 @@ const closeDirAft = document.getElementById('closeAft');
             }
           },160*(i+1))
         });
+
+        const getHighlight = document.querySelectorAll('.activityBgr');
+
+        const hightlightOptions = {
+          root: null,
+          rootMargin: "-48%",
+          threshold: 0,
+        }
+
+        const showHightlight = (highlights) =>{
+          highlights.forEach((highlight) =>{
+
+
+            if (highlight.isIntersecting) {
+              highlight.target.classList.toggle('highlight')
+              highlight.target.classList.toggle("unfocus")
+            }else{
+              highlight.target.classList.remove("highlight")
+              highlight.target.classList.remove("unfocus")
+
+            }
+          }
+        )}
+
+        const hightlightObserver = new IntersectionObserver(showHightlight, hightlightOptions);
+
+        getHighlight.forEach((Highlight) => { 
+          setInterval(() => {
+            hightlightObserver.observe(Highlight);
+          }, 6000);
+        });
+
       });
 
       ScheduleObserver.unobserve(scheduleSection);
@@ -272,36 +304,50 @@ const closeDirAft = document.getElementById('closeAft');
  const ScheduleObserver = new IntersectionObserver(scheduleAnimation, schedOptions);
  ScheduleObserver.observe(scheduleSection);
 
+  
+  const leftBtn = document.querySelector(".leftPhotoBtn");
+  const rightBtn = document.querySelector(".rightPhotoBtn");
+  const photoList = document.querySelector(".photoList");
+  const galImg = document.querySelectorAll(".galleryImg");
+ 
+ 
+  console.log(leftBtn);
+  console.log(rightBtn);
+  console.log(photoList);
+  console.log(galImg);
+ 
+  let init = 0;
+  let amount = 100;
+ 
+  rightBtn.addEventListener("click", function(){
+ 
+   if (init < (galImg.length - 1) * amount) {
+     init += amount;
 
-  /*Interserction Observer for highlighting activities*/
+     photoList.style.transform = "translateX(-" + init + "svw";
+     photoList.style.transition = "transform 0.4s ease-out"
+   }
+   else{
+    photoList.style.transition = "";
+    photoList.style.transform = "translateX(-" + 0 + "svw";
+    init = 0;
+   }
+ 
+  })
 
-const getHighlight = document.querySelectorAll('.activityBgr');
+  leftBtn.addEventListener("click", function(){
 
-const hightlightOptions = {
-  root: null,
-  rootMargin: "-48%",
-  threshold: 0,
-}
+    if (init > 0) {
+      init -= amount;
 
-const showHightlight = (highlights) =>{
-  highlights.forEach((highlight) =>{
-
-
-    if (highlight.isIntersecting) {
-      highlight.target.classList.toggle('highlight')
-      highlight.target.classList.toggle("unfocus")
-    }else{
-      highlight.target.classList.remove("highlight")
-      highlight.target.classList.remove("unfocus")
+      photoList.style.transform = "translateX(-" + init + "svw";
+      photoList.style.transition = "transform 0.4s ease-out"
 
     }
-  }
-)}
+    else{
+      photoList.style.transition = "";
+      init =  2900;
+      photoList.style.transform = "translateX(-" + init + "svw";
+    }
 
-const hightlightObserver = new IntersectionObserver(showHightlight, hightlightOptions);
-
-getHighlight.forEach((Highlight) => { 
-  setInterval(() => {
-    hightlightObserver.observe(Highlight);
-  }, 6000);
-});
+  })

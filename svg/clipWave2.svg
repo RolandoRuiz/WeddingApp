@@ -8,6 +8,12 @@
     </style>
   </defs>
   <g id="Capa_1-2" data-name="Capa 1">
-    <path class="cls-1" d="m0,.75c.12.18.89.06,1,.25V0H0v.75Z"/>
+    <g id="Capa_2-2" data-name="Capa 2">
+      <g id="Capa_1-2" data-name="Capa 1-2">
+        <g id="Capa_1-2-2" data-name="Capa 1-2-2">
+          <path class="cls-1" d="m0,.06v.94c.11-.19.88-.07,1-.25v-.75c-.12.14-.67,0-1,.06Z"/>
+        </g>
+      </g>
+    </g>
   </g>
 </svg>
