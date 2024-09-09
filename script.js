@@ -310,12 +310,6 @@ const closeDirAft = document.getElementById('closeAft');
   const photoList = document.querySelector(".photoList");
   const galImg = document.querySelectorAll(".galleryImg");
  
- 
-  console.log(leftBtn);
-  console.log(rightBtn);
-  console.log(photoList);
-  console.log(galImg);
- 
   let init = 0;
   let amount = 100;
  
@@ -351,3 +345,51 @@ const closeDirAft = document.getElementById('closeAft');
     }
 
   })
+
+  const playBtn = document.querySelector('#playBtn');
+  const pauseBtn = document.querySelector('#pauseBtn');
+  const audio = document.querySelector("#audio");
+  const audioTimeline = document.querySelector('.audioTimeline');
+  const audioProgress = document.querySelector('.timelineProgress');
+
+ /* setTimeout(() => {
+    audio.muted = false;
+    audio.play();
+  }, 1000);*/
+
+
+  function playSong(){
+    playBtn.style.zIndex = "-1";
+    playBtn.style.opacity = "0";
+    pauseBtn.style.zIndex = "1";
+    pauseBtn.style.opacity = "1";
+    audio.play();
+  }
+
+  function pauseSong(){
+    pauseBtn.style.zIndex = "-1";
+    pauseBtn.style.opacity = "0";
+    playBtn.style.zIndex = "1";
+    playBtn.style.opacity = "1";
+    audio.pause();
+  }
+
+  function updateProgress(e){
+    const {duration, currentTime} = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
+    console.log(progressPercent);
+    audioProgress.style.width = progressPercent + '%';
+  }
+
+  function setProgress(e){
+    const width = this.clientWidth;
+    const clickX = e.offsetX;
+    const duration = audio.duration;
+    audio.currentTime = (clickX / width) * duration;
+
+  }
+
+playBtn.addEventListener("click", playSong);
+pauseBtn.addEventListener("click", pauseSong);
+audio.addEventListener('timeupdate', updateProgress)
+audioTimeline.addEventListener('click', setProgress)

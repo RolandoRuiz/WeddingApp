@@ -619,11 +619,115 @@ body{
 
 
 .OurSongBox{
-    background-color: PINK;
-    height: 20LVH;
+    height: 25lvh;
     width: 100%;
     margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+}
 
+.musicIcon{
+    width: 100%;
+    height: 100%;
+}
+
+.mIcon{
+    width: 100%;
+    height: 7lvh;
+    object-fit: contain;
+    margin-bottom: 5%;
+}
+
+.musicPlayer{
+    width: 100%;
+    height: 15lvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.songTitle{
+    display: grid;
+    width: 100%;
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 1; grid-row-end: 2;
+    font-family: MirageMedium;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.audioTimeline{
+    width: 80%;
+    height: 5lvh;
+    display: grid;
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 2; grid-row-end: 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+    mask-image: url(svg/musicWave.svg);
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: #949494;
+    margin: 4% 0% 4% 0%;
+}
+
+.timelineProgress{
+    width: 0%;
+    height: 100%;
+    background-color: #1e1e1e;
+}
+
+
+.musicBtnBox{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 3; grid-row-end: 4;
+    z-index: 10;
+    padding: 2%;
+}
+
+#playBtn{
+    z-index: 1;
+}
+
+#pauseBtn{
+    z-index: -1;
+    opacity: 0;
+}
+
+.playIcon{
+    height: 100%;
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 1; grid-row-end: 2;
+    background-color: var(--MainBgColor);
+
+}
+
+.pauseIcon{
+    height: 100%;
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 1; grid-row-end: 2;
+    background-color: var(--MainBgColor);
+}
+
+.pIcon{
+    height: 100%;
+}
+
+#audio{
+    grid-column-start: 1; grid-column-end: 2;
+    grid-row-start: 1; grid-row-end: 2;
 }
 
 /*GALLERY SECTION*/
