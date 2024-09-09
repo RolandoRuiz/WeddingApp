@@ -151,7 +151,7 @@ body{
     color: #fff;
     justify-self: start;
     align-self: center;
-    font-family: clarissa;
+    font-family: stylish;
     font-weight: 100;
     font-size: 2.2em;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
@@ -196,23 +196,10 @@ body{
     flex-direction: column;
 }
 
-.multiply{
-    position: absolute;
-    opacity: 80%;
-    will-change: opacity;
-    mix-blend-mode:multiply;
-    height: 84svh;
-    width: 100lvw;
-    z-index: 5;
-
-}
-
 .galleryFixed{
-    height: 84svh;
+    height: 83svh;
     width: 100lvw;
-    clip-path: url(#galleryMask);
-    mask-image: linear-gradient(180deg, rgb(0, 0, 0) 60%, rgba(255, 255, 255, 0.042) 90%);
-    
+    clip-path: url(#galleryMask);    
 }
 
 .galleryFixedImg{
@@ -224,71 +211,87 @@ body{
    z-index: 2;
 }
 
+.multiply{
+    position: absolute;
+    opacity: 85%;
+    will-change: opacity;
+    mix-blend-mode:multiply;
+    height: inherit;
+    width: 100lvw;
+    z-index: 5;
+
+}
+
 .dateTextBox{
-    height: 43.5svh;
-    width: 100svw;
+    height: 30svh;
+    width: 100%;
     position: absolute;
     z-index: 100;
     bottom: 0%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.4fr 0.15fr;
 }
 
-.dateArea{
-    height: 23svh;
+.dateBox{
     display: grid;
+    position: absolute;
+    grid-row-start: 1; grid-row-end: 2;
+    grid-column-start: 1; grid-column-end: 2;
     grid-template-rows: repeat(6, 1fr);
-    align-self: center;
+    width: 100%;
+    height: 100%;
+    align-self: flex-end;
     justify-items: center;
-    align-items: center;
-    position: relative;
     z-index: 3;
     
 }
 
 .dateDay{
+    grid-row-start: 1; grid-row-end: 5;
+    grid-column-start: 1; grid-column-end: 2;
+    display: grid;
+    position: relative;
+    align-self: end;
     font-family: ponteBold;
-    align-self: self-end;
-    letter-spacing: 0em;
-    grid-row-start: 4;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 2;
+    color: var(--MainBgColor);
     font-size: 10em;
+    line-height: 0.5em;
     transform: scale(1.2,1.3);
-    background: -webkit-linear-gradient(90deg, #ffffff 100%, #ffffff 0%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.9));
+    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.84) 20%, rgba(0, 0, 0, 0.042) 60%);
+    z-index: 5;
 }
 
 .dateMonth{
-    color: #1e1e1e;
-    font-family: clarissa;
+    grid-row-start: 5; grid-row-end: 6;
+    grid-column-start: 1; grid-column-end: 2;
+
+    display: grid;
+    height: 100%;
     align-self: flex-end;
-    grid-row-start: 5;
-    grid-row-end: 6;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    font-size: 6em;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+    position: relative;
+    font-family: stylish;
+    color: #1e1e1e;
+    -webkit-text-stroke: 0.55px #1e1e1e;
+    font-size: 5.5em;
+    line-height: 0.8em;
+    z-index: 10;
 }
 
 .dateYear{
-    color: #1e1e1e;
+    grid-row-start: 6; grid-row-end: 7;
+    grid-column-start: 1; grid-column-end: 2;
+
+    display: grid;
+    height: 100%;
+    align-self: center;
     position: relative;
-    align-self: flex-end;
     font-family: MirageMedium;
-    letter-spacing: 0em;
-    grid-row-start: 5;
-    grid-row-end: 7;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    font-size: 2.5em;
-    top: 1.5%;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+    color: #1e1e1e;
+    font-size: 2.2em;
+    line-height: 0.9em;
+    text-align: center;
 }
 
 .objectBox{
@@ -332,13 +335,23 @@ body{
     align-items: center;
     justify-content: center;
     z-index: 100;
-    top: 1.5%;
-    
+    animation: direct 0.8s ease-in infinite alternate;
 }
 
 .downArrow > img{
 
     height: 100%;
+}
+
+@keyframes direct {
+    from{
+        transform: translateY(-1px) rotateY(0deg);
+        
+    }to{
+
+        transform: translateY(8px) rotateY(180deg);
+    }
+    
 }
 
 .svgTxt {
