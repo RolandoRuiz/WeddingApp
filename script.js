@@ -400,6 +400,9 @@ const flow = document.body;
 const closebgrGal = document.querySelector(".backgroundGallery");
 const closefixGal = document.querySelector(".galleryFixed");
 const appearDate = document.querySelectorAll(".date");
+const appearEmblem = document.querySelector(".emblem");
+
+
 
 function closeStart(){
   audio.play();
@@ -424,6 +427,7 @@ function closeStart(){
     }, 250*(i+1));
   });
 
+  appearEmblem.classList.add("showEmblem");
 
 
 }

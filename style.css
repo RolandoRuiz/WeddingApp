@@ -253,15 +253,32 @@ body{
 }
 
 .emblem{
+    opacity: 0;
     height: inherit;
     object-fit: contain;
     position: relative;
     right: 1%;
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
+    scale: 1.2;
 }
 
 .emblem object{
     height: inherit;
+}
+
+.showEmblem{
+    animation: showEmblem 1s ease 3s forwards;
+}
+
+@keyframes showEmblem {
+    from{
+        opacity: 0;
+        scale: 1.2s;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+    
 }
 
 .introArea{
