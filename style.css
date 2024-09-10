@@ -1984,12 +1984,11 @@ body{
 }
 
 .IB-1{
-    position: absolute;
-    max-width: 80%;
-    rotate: 175deg;
-    left: 115%;
-    top: -42%;
-    transform-origin: bottom left;
+    position: relative;
+    max-width: 75%;
+    left: 45%;
+    top: 0%;
+    transform-origin: top right;
 }
 
 .IB-2{
@@ -2002,11 +2001,10 @@ body{
 
 .IB-3{
     position: absolute;
-    max-width: 110%;
-    bottom: -60%;
-    rotate: 175deg;
-    left: -135%;
-    transform-origin: top right;
+    max-width: 100%;
+    transform-origin: bottom left;
+    bottom: -5%;
+    right: 25%;
 }
 
 .IB-4{
