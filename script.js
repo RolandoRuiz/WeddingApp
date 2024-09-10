@@ -393,7 +393,10 @@ audio.addEventListener('timeupdate', updateProgress)
 audioTimeline.addEventListener('click', setProgress)
 
 const startInvitation = document.querySelector(".startInvitation");
-const closeMsg = document.querySelector(".initialTxt");
+const closeMsg = document.querySelector(".contentBox-InitialMsg");
+const closeBranches = document.querySelector(".initialBranches");
+const closeInitialBox = document.querySelector(".initialMsg");
+
 
 function closeStart(){
   audio.play();
@@ -403,6 +406,8 @@ function closeStart(){
   pauseBtn.style.opacity = "1";
 
   closeMsg.classList.add("closeMsg");
+  closeBranches.classList.add("closeBranches");
+  closeInitialBox.classList.add("closeInitialBox");
 
 
 }

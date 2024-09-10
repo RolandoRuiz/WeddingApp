@@ -8,7 +8,7 @@
 }
 
 body{
-    background-color: var(--MainBgColor);
+    background-color: var(--MainBgColor);overflow: hidden;
 }
 
 @font-face {
@@ -121,18 +121,24 @@ body{
 }
 
 .closeMsg{
-    animation: closeMsg 0.5s ease-in 1s forwards;
+    animation: closeMsg 2s ease  forwards;
 }
 
 @keyframes closeMsg {
-    from{
+    0%{
         opacity: 1;
-        display: grid;
+        display: flex;
         scale: 1;
-    }to{
+        filter: blur(0);
+    }30%{
+        opacity: 0.6;
+        scale: 0.97;
+        filter: blur(0);
+    }100%{
         opacity: 0;
         display: none;
-        scale: 0.9;
+        scale: 1.2;
+        filter: blur(3px);
     }
 }
 .svgTxt {
@@ -160,11 +166,11 @@ body{
 }
 
 .line5{
-    animation-delay: 2.75s;
+    animation-delay: 3s;
 }
 
 .line6{
-    animation-delay: 3.2s;
+    animation-delay: 3.5s;
 }
 
 .line7{
@@ -192,19 +198,19 @@ body{
 }
 
 .line13{
-    animation-delay: 8s;
+    animation-delay: 7.5s;
 }
 
 .line14{
-    animation-delay: 8.5s;
+    animation-delay: 8s;
 }
 
 .line15{
-    animation-delay: 9.2s;
+    animation-delay: 8.5s;
 }
 
 .line16{
-    animation-delay: 10s;
+    animation-delay: 9.5s;
 }
 
 
@@ -1938,6 +1944,33 @@ body{
     height: 100svh;
     width: 100svw;
     z-index: 0;
+    
+}
+
+.closeBranches{
+    animation: closeBranches 2s ease 0.5s forwards;
+}
+
+@keyframes closeBranches {
+    from{
+        scale: 1;
+    }to{
+        scale: 2
+    }
+}
+
+.closeInitialBox{
+    animation: closeInitialBox 1.5s ease 1s forwards;
+}
+
+@keyframes closeInitialBox {
+    from{
+        display: grid;
+        opacity: 1;
+    }to{
+        display: none;
+        opacity: 0;
+    }
 }
 
 .branch{
