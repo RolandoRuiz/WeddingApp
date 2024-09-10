@@ -355,11 +355,6 @@ const closeDirAft = document.getElementById('closeAft');
   const audioTimeline = document.querySelector('.audioTimeline');
   const audioProgress = document.querySelector('.timelineProgress');
 
- /* setTimeout(() => {
-    audio.muted = false;
-    audio.play();
-  }, 1000);*/
-
 
   function playSong(){
     playBtn.style.zIndex = "-1";
@@ -396,3 +391,21 @@ playBtn.addEventListener("click", playSong);
 pauseBtn.addEventListener("click", pauseSong);
 audio.addEventListener('timeupdate', updateProgress)
 audioTimeline.addEventListener('click', setProgress)
+
+const startInvitation = document.querySelector(".startInvitation");
+const closeMsg = document.querySelector(".initialTxt");
+
+function closeStart(){
+  audio.play();
+  playBtn.style.zIndex = "-1";
+  playBtn.style.opacity = "0";
+  pauseBtn.style.zIndex = "1";
+  pauseBtn.style.opacity = "1";
+
+  closeMsg.classList.add("closeMsg");
+
+
+}
+
+startInvitation.addEventListener("click", closeStart);
+
