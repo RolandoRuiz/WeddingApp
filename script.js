@@ -396,7 +396,10 @@ const startInvitation = document.querySelector(".startInvitation");
 const closeMsg = document.querySelector(".contentBox-InitialMsg");
 const closeBranches = document.querySelector(".initialBranches");
 const closeInitialBox = document.querySelector(".initialMsg");
-
+const flow = document.body;
+const closebgrGal = document.querySelector(".backgroundGallery");
+const closefixGal = document.querySelector(".galleryFixed");
+const appearDate = document.querySelectorAll(".date");
 
 function closeStart(){
   audio.play();
@@ -408,6 +411,19 @@ function closeStart(){
   closeMsg.classList.add("closeMsg");
   closeBranches.classList.add("closeBranches");
   closeInitialBox.classList.add("closeInitialBox");
+  closebgrGal.classList.add("reducebgrGallery");
+  closefixGal.classList.add("reducefixedGallery");
+
+  setTimeout(() => {
+    flow.classList.add("beVisible");
+  }, 2500);
+
+  appearDate.forEach((date,i) => {
+    setTimeout(() => {
+        date.classList.add("dateAppear");
+    }, 250*(i+1));
+  });
+
 
 
 }

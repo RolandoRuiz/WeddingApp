@@ -8,7 +8,12 @@
 }
 
 body{
-    background-color: var(--MainBgColor);overflow: hidden;
+    background-color: var(--MainBgColor);
+    overflow: hidden;
+}
+
+.beVisible{
+    overflow: visible;
 }
 
 @font-face {
@@ -306,7 +311,7 @@ body{
 }
 
 .backgroundGallery{
-    height: 100svh;
+    height: 135svh;
     width: 100lvw;
     display: flex;
     position: absolute;
@@ -317,13 +322,39 @@ body{
 }
 
 .galleryFixed{
-    height: 90svh;
+    height: 135svh;
     width: 100lvw;
     clip-path: url(#galleryMask);    
 }
 
+.reducebgrGallery{
+    animation: reducebgrGallery 1.5s cubic-bezier(0.43, 0.13, 0.62, 1.18) forwards 3s;
+}
+
+.reducefixedGallery{
+    animation: reducefixedGallery 1.5s cubic-bezier(0.43, 0.13, 0.62, 1.18) forwards 3s;
+}
+
+@keyframes reducebgrGallery {
+    from{
+        height: 135svh;
+    }to{
+        height: 100svh;
+    }
+    
+}
+
+@keyframes reducefixedGallery {
+    from{
+        height: 135svh;
+    }to{
+        height: 90svh;
+    }
+    
+}
+
 .galleryFixedImg{
-   height: 100%;
+   height: 100svh;
    width: 100%;
    object-fit: cover;
    object-position: center;
@@ -367,6 +398,7 @@ body{
 }
 
 .dateDay{
+    opacity: 0;
     grid-row-start: 1; grid-row-end: 6;
     grid-column-start: 1; grid-column-end: 2;
     display: grid;
@@ -384,6 +416,7 @@ body{
 }
 
 .dateMonth{
+    opacity: 0;
     grid-row-start: 5; grid-row-end: 6;
     grid-column-start: 1; grid-column-end: 2;
 
@@ -400,6 +433,7 @@ body{
 }
 
 .dateYear{
+    opacity: 0;
     grid-row-start: 6; grid-row-end: 7;
     grid-column-start: 1; grid-column-end: 2;
 
@@ -413,6 +447,18 @@ body{
     font-size: 2.2em;
     line-height: 0.9em;
     text-align: center;
+}
+
+.dateAppear{
+    animation: dateAppear 0.5s cubic-bezier(.57,.23,.52,1.8) forwards 3.4s;
+}
+
+@keyframes dateAppear {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }
 
 .objectBox{
