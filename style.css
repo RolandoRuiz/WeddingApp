@@ -42,30 +42,6 @@ body{
 }
 
 
-.initialMsg{
-    height: 100svh;
-    width: 100lvw;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    background-color:var(--MainBgColor);
-    position: absolute;
-    top: 0%;
-    left: 0%;
-
-    animation-name: disappear2;
-    animation-duration: 1s;
-    animation-delay: 17s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-
-.initialTxt{
-    width: 80svw;
-    height: auto;
-}
-
-
 .home{
     height: 100svh;
     width: 100svw;
@@ -75,62 +51,28 @@ body{
 
 .header{
     width: 100%;
-    height: 8svh;
+    height: 15svh;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     position: absolute;
-    top: 0%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    top: 3%;
     z-index: 2;
 }
 
-.menu{
-    height: 4.5svh;
-    width: 4.5svh;
-    align-self: center;
-    justify-self: end;
-    margin-right: 10%;
-
-    /*background-color: rgb(19, 207, 213);*/
-    grid-column-start: 3;
-    grid-column-end: 4;
-    z-index: 10;
+.emblem{
+    height: inherit;
+    object-fit: contain;
+    position: relative;
+    right: 1%;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
 }
 
-.menuButton{
-    height: 100%;
-    width: 100%;
-    background: none;
-    cursor: pointer;
-}
-
-.hamCircle {
-  fill: #fff;
-  transform: scale(1);
-  transform-origin: center;
-
-  transition: transform 0.4s cubic-bezier(0.31, -0.01, 0.22, 1.39);
-}
-
-.hamOutCircle {
-  fill: #fff;
-  transform: scale(1);
-  transform-origin: center;
-}
-
-.hamCross {
-  fill: #fff;
-  transform: scale(0);
-  transform-origin: center;
-  transition: transform 0.3s cubic-bezier(0.25, 0.09, 0.64, 1.6);
-}
-
-.hamCircleFocus{
-    transform: scale(0);
-}
-
-.hamCrossFocus{
-    transform: scale(1);
+.emblem object{
+    height: inherit;
 }
 
 .introArea{
@@ -167,12 +109,6 @@ body{
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
 }
 
-.emblem{
-    position: relative;
-    right: 4.5%;
-    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.8));
-}
-
 .announcement{
     color: #ffffff;
     justify-self: center;
@@ -197,7 +133,7 @@ body{
 }
 
 .galleryFixed{
-    height: 83svh;
+    height: 90svh;
     width: 100lvw;
     clip-path: url(#galleryMask);    
 }
@@ -213,24 +149,23 @@ body{
 
 .multiply{
     position: absolute;
-    opacity: 85%;
+    opacity: 80%;
     will-change: opacity;
     mix-blend-mode:multiply;
     height: inherit;
     width: 100lvw;
     z-index: 5;
-
 }
 
 .dateTextBox{
-    height: 30svh;
+    height: 45svh;
     width: 100%;
     position: absolute;
     z-index: 100;
     bottom: 0%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 0.4fr 0.15fr;
+    grid-template-rows: 1fr 0.35fr 0.15fr;
 }
 
 .dateBox{
@@ -238,28 +173,30 @@ body{
     position: absolute;
     grid-row-start: 1; grid-row-end: 2;
     grid-column-start: 1; grid-column-end: 2;
-    grid-template-rows: repeat(6, 1fr);
     width: 100%;
     height: 100%;
-    align-self: flex-end;
+    bottom: 30%;
+    grid-template-rows: repeat(6, 1fr);
     justify-items: center;
     z-index: 3;
     
 }
 
 .dateDay{
-    grid-row-start: 1; grid-row-end: 5;
+    grid-row-start: 1; grid-row-end: 6;
     grid-column-start: 1; grid-column-end: 2;
     display: grid;
     position: relative;
     align-self: end;
     font-family: ponteBold;
     color: var(--MainBgColor);
-    font-size: 10em;
-    line-height: 0.5em;
-    transform: scale(1.2,1.3);
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.9));
-    mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.84) 20%, rgba(0, 0, 0, 0.042) 60%);
+    mask-image: linear-gradient(0deg, #00000000 5%, #000000 100%);
+    font-size: 8em;
+    line-height: 1em;
+    transform: scale(1.2,1.5);
+    bottom: 10%;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.199);
+    /*mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.318) 10%, rgb(205, 41, 41) 100%);*/
     z-index: 5;
 }
 
@@ -272,8 +209,8 @@ body{
     align-self: flex-end;
     position: relative;
     font-family: stylish;
-    color: #1e1e1e;
-    -webkit-text-stroke: 0.55px #1e1e1e;
+    color: var(--MainBgColor);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.4);
     font-size: 5.5em;
     line-height: 0.8em;
     z-index: 10;
@@ -288,7 +225,8 @@ body{
     align-self: center;
     position: relative;
     font-family: MirageMedium;
-    color: #1e1e1e;
+    color: var(--MainBgColor);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.199);
     font-size: 2.2em;
     line-height: 0.9em;
     text-align: center;
@@ -314,28 +252,95 @@ body{
 
 }
 
-#dateCounter{
+.counter{
+    grid-row-start: 2; grid-row-end: 3;
+    grid-column-start: 1; grid-column-end: 2;
     position: relative;
-    color: #1e1e1e;
-    font-family: MirageMedium;
-    font-size: 0.9em;
-    line-height: 0.9em;
-    -webkit-text-stroke: 0px;
-    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0));
-    grid-row-start: 2;
-    grid-row-end: 3;
+    padding: 0% 19% 0% 19%;
+    bottom: 15%;
+}
+
+.counterBox{
+    width: 100%;
+    height: 100%;
+    display: grid;
     justify-items: center;
-    align-items: flex-start;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.timeUnit{
+    width: 90%;
+    height: 100%;
+    background-color: #d1d1d1;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1fr;
+}
+
+#daysBox{
+    grid-row-start: 1; grid-row-end: 3;
+    grid-column-start: 1; grid-column-end: 2;
+}
+
+#hoursBox{
+    grid-row-start: 1; grid-row-end: 3;
+    grid-column-start: 2; grid-column-end: 3;
+}
+
+#minutesBox{
+    grid-row-start: 1; grid-row-end: 3;
+    grid-column-start: 3; grid-column-end: 4;
+}
+
+#secondsBox{
+    grid-row-start: 1; grid-row-end: 3;
+    grid-column-start: 4; grid-column-end: 5;
+}
+
+.unitDivider{
+    width: 90%;
+    height: 1px;
+    background-color: #727272;
+    grid-row-start: 2; grid-row-end: 2;
+    grid-column-start: 1; grid-column-end: 2;
+}
+
+.unitText{
+    font-family: MirageMedium;
+    grid-row-start: 1; grid-row-end: 2;
+    grid-column-start: 1; grid-column-end: 2;
+    display: grid;
+    justify-self: center;
+    align-self: center;
+    color: #1e1e1e;
+}
+
+.timer{
+    font-family: MirageMedium;
+    font-size: 1.5em;
+    grid-row-start: 2; grid-row-end: 3;
+    grid-column-start: 1; grid-column-end: 2;
+    display: grid;
+    justify-self: center;
+    align-self: center;
 }
 
 .downArrow{
+
+    grid-row-start: 3; grid-row-end: 4;
+    grid-column-start: 1; grid-column-end: 2;
+    width: 100%;
     height: 2svh;
-    position: relative;
-    display: flex;
+    position: absolute;
+    bottom: 15px;
+    display: grid;
     align-items: center;
     justify-content: center;
     z-index: 100;
-    animation: direct 0.8s ease-in infinite alternate;
+    animation: direct 1.5s ease-in infinite alternate;
 }
 
 .downArrow > img{
