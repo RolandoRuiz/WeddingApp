@@ -42,6 +42,168 @@ body{
 }
 
 
+.initialMsg{
+    height: 100svh;
+    width: 100svw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #121212;
+    padding: 15%;
+    position: absolute;
+    top: 0%;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.contentBox-InitialMsg{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+
+}
+
+@keyframes introDisappear {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.startInvitation{
+    width: 40svw;
+    height: 4svh;
+    opacity: 0;
+    background-color: var(--MainBgColor);
+    position: relative;
+    display: grid;
+    grid-column-start: 1; grid-column-end: 1;
+    grid-row-start: 1; grid-row-end: 1;
+    text-align: center;
+    align-items: center;
+    border-radius: 100px;
+
+    font-family: MirageMedium;
+    font-size: 1.2em;
+    color: #1e1e1e;
+    background-color: rgba(248, 247, 247, 0.7);
+    cursor: pointer;    
+    
+    animation-name: appear1;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-fill-mode: forwards;
+    animation-delay: 12s;
+}
+
+.startInvitation:focus{
+    background-color: rgb(255, 184, 198);
+}
+
+.initialTxt{
+    width: 65svw;
+    height: auto;
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-column-start: 1; grid-column-end: 1;
+    grid-row-start: 1; grid-row-end: 1;
+}
+
+.svgTxt {
+    fill: #121212;
+    animation-name: appear1;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    animation-fill-mode: forwards;
+}
+
+.line1{
+    animation-delay: 1s;
+}
+
+.line2{
+    animation-delay: 1.5s;
+}
+
+.line3{
+    animation-delay: 2s;
+}
+
+.line4{
+    animation-delay: 2.5s;
+}
+
+.line5{
+    animation-delay: 2.75s;
+}
+
+.line6{
+    animation-delay: 3.2s;
+}
+
+.line7{
+    animation-delay: 4.5s;
+}
+
+.line8{
+    animation-delay: 5s;
+}
+
+.line9{
+    animation-delay: 5.5s;
+}
+
+.line10{
+    animation-delay: 6s;
+}
+
+.line11{
+    animation-delay: 6.5s;
+}
+
+.line12{
+    animation-delay: 7s;
+}
+
+.line13{
+    animation-delay: 8s;
+}
+
+.line14{
+    animation-delay: 8.5s;
+}
+
+.line15{
+    animation-delay: 9s;
+}
+
+.line16{
+    animation-delay: 9.5s;
+}
+
+
+@keyframes appear1{
+    from{
+        fill: #1e1e1e;
+        opacity: 0;
+    }
+    to{
+        fill: rgb(255, 255, 255);
+        opacity: 1;
+    }
+}
+
+
 .home{
     height: 100svh;
     width: 100svw;
@@ -196,7 +358,6 @@ body{
     transform: scale(1.2,1.5);
     bottom: 10%;
     text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.199);
-    /*mask-image: linear-gradient(0deg, rgba(0, 0, 0, 0.318) 10%, rgb(205, 41, 41) 100%);*/
     z-index: 5;
 }
 
@@ -359,87 +520,6 @@ body{
     
 }
 
-.svgTxt {
-    fill: var(--MainBgColor);
-    animation-name: appear1;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(0.55, 0.085, 0.68, 0.53);
-    animation-fill-mode: forwards;
-}
-
-.line1{
-    animation-delay: 1s;
-}
-
-.line2{
-    animation-delay: 1.5s;
-}
-
-.line3{
-    animation-delay: 2s;
-}
-
-.line4{
-    animation-delay: 2.5s;
-}
-
-.line5{
-    animation-delay: 2.75s;
-}
-
-.line6{
-    animation-delay: 3.2s;
-}
-
-.line7{
-    animation-delay: 4.5s;
-}
-
-.line8{
-    animation-delay: 5s;
-}
-
-.line9{
-    animation-delay: 5.5s;
-}
-
-.line10{
-    animation-delay: 6s;
-}
-
-.line11{
-    animation-delay: 6.5s;
-}
-
-.line12{
-    animation-delay: 7s;
-}
-
-.line13{
-    animation-delay: 8s;
-}
-
-.line14{
-    animation-delay: 8.5s;
-}
-
-.line15{
-    animation-delay: 9s;
-}
-
-.line16{
-    animation-delay: 9.5s;
-}
-
-
-@keyframes appear1{
-    from{
-        fill: var(--MainBgColor);
-    }
-    to{
-        fill: rgb(255, 255, 255);
-    }
-}
 
 /*INVITATION SECTION*/
 
@@ -1836,3 +1916,51 @@ body{
     }
 }
 
+
+.initialBranches{
+    position: absolute;
+    height: 100svh;
+    width: 100svw;
+    z-index: 0;
+}
+
+.branch{
+    opacity: 0.9;
+}
+
+.IB-1{
+    position: absolute;
+    max-width: 80%;
+    rotate: 180deg;
+    left: 40%;
+    top: -2%;
+}
+
+.IB-2{
+    position: absolute;
+    max-width: 25%;
+    left: -3%;
+    top: 2%;
+}
+
+.IB-3{
+    position: absolute;
+    max-width: 110%;
+    bottom: -8%;
+    rotate: 180deg;
+    left: -30%;
+}
+
+.IB-4{
+    position: absolute;
+    max-width: 18%;
+    bottom: 0%;
+    right: -5%;
+}
+
+.IB-5{
+    position: absolute;
+    max-width: 20%;
+    top: 20%;
+    left: -5%;
+}
