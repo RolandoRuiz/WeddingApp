@@ -238,6 +238,83 @@ body{
     display: grid;
 }
 
+.homeBranches{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.homeBranchOffset1, .homeBranchOffset2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    scale: 2;
+}
+
+.showHomeBranches{
+    animation: enterBranch 2s cubic-bezier(0.25, 0.09, 0.64, 1) forwards;
+}
+
+
+
+.homeBranchOffset1{
+    animation-delay: 2s;
+}
+
+.homeBranchOffset2{
+    animation-delay: 2.5s;
+}
+
+@keyframes enterBranch {
+    from{
+        scale: 2;
+        opacity: 0;
+    }to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.hb1{
+    position: absolute;
+    max-width: 30%;
+    height: auto;
+    left: -2%;
+    top: -5%;
+    transform-origin: top left;
+}
+
+.hb2{
+    position: absolute;
+    max-width: 50%;
+    height: auto;
+    right: -20%;
+    bottom: -5%;
+    rotate: 20deg;
+    transform-origin: top right;
+}
+
+.hb3{
+    position: absolute;
+    max-width: 35%;
+    height: auto;
+    right: -5%;
+    bottom: 70%;
+    transform-origin: top right;
+}
+
+.hb4{
+    position: absolute;
+    max-width: 30%;
+    height: auto;
+    left: -5%;
+    bottom: 0%;
+    transform-origin: top left;
+}
+
 .header{
     width: 100%;
     height: 15svh;
@@ -295,37 +372,6 @@ body{
     grid-column-end: 3;
 }
 
-.leftName{
-    color: #fff;
-    justify-self: start;
-    align-self: center;
-    font-family: stylish;
-    font-weight: 100;
-    font-size: 2.2em;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-}
-
-.rightName{
-    color: #fff;
-    justify-self: end;
-    align-self: center;
-    font-family: clarissa;
-    font-weight: 100;
-    font-size: 2.2em;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-}
-
-.announcement{
-    color: #ffffff;
-    justify-self: center;
-    align-self: center;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    font-family: clarissa;
-    font-size: 4em;
-    font-weight: normal;
-    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
-}
 
 .backgroundGallery{
     height: 100svh;
@@ -336,6 +382,7 @@ body{
     background-color: var(--MainBgColor);
     z-index: 1;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .galleryFixed{
@@ -363,10 +410,12 @@ body{
    height: 100svh;
    width: 100%;
    object-fit: cover;
-   object-position: center;
+   object-position: 50% 30px;
    position: relative;
+   scale: 1.1;
    z-index: 2;
 }
+
 
 .multiply{
     position: absolute;
@@ -412,13 +461,15 @@ body{
     align-self: end;
     font-family: ponteBold;
     color: var(--MainBgColor);
-    mask-image: linear-gradient(0deg, #00000000 5%, #000000 100%);
+    mask-image: linear-gradient(0deg, #00000000 5%, #000000 95%);
     font-size: 8em;
     line-height: 1em;
-    transform: scale(1.2,1.5);
-    bottom: 10%;
-    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.199);
+    transform: scale(1.4,1.5);
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.9), 0px 3px 5px rgba(0, 0, 0, 0.617);
     z-index: 5;
+    margin-bottom: 10%;
+    bottom: 15px;
+   
 }
 
 .dateMonth{
@@ -436,6 +487,8 @@ body{
     font-size: 5.5em;
     line-height: 0.8em;
     z-index: 10;
+    bottom: 15px;
+    
 }
 
 .dateYear{
@@ -453,6 +506,8 @@ body{
     font-size: 2.2em;
     line-height: 0.9em;
     text-align: center;
+    bottom: 15px;
+    
 }
 
 .dateAppear{
@@ -462,8 +517,10 @@ body{
 @keyframes dateAppear {
     from{
         opacity: 0;
+        bottom: 15px;
     }to{
         opacity: 1;
+        bottom: 0px;
     }
 }
 
@@ -514,7 +571,7 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1fr;
     position: relative;
-    top: 13%;
+    bottom: 13%;
     opacity: 0;
 }
 
@@ -525,10 +582,10 @@ body{
 @keyframes appearTime {
     from{
         opacity: 0;
-        top: 13%;
+        bottom: 13%;
     }to{
         opacity: 1;
-        top: 0%;
+        bottom: 0%;
     }
 }
 
@@ -629,7 +686,7 @@ body{
 .invitationTextBox{
     height: 90lvh;
     width: 100svw;
-    margin-top: 20%; margin-bottom: 10%;
+    margin-top: 25%; margin-bottom: 10%;
 }
 
 .partnerTitleBox{

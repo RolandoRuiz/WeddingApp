@@ -395,6 +395,7 @@ audioTimeline.addEventListener('click', setProgress)
 const startInvitation = document.querySelector(".startInvitation");
 const closeMsg = document.querySelector(".contentBox-InitialMsg");
 const closeBranches = document.querySelector(".initialBranches");
+const showHomeBranches = document.querySelectorAll(".showBranch");
 const closeInitialBox = document.querySelector(".initialMsg");
 const flow = document.body;
 const closefixGal = document.querySelector(".galleryFixed");
@@ -436,8 +437,29 @@ function closeStart(){
   appearEmblem.classList.add("showEmblem");
   appearDArrow.classList.add("showDownArrow")
 
+  showHomeBranches.forEach((homebranch) => {
+    homebranch.classList.add("showHomeBranches");
+  });
+
 
 }
 
 startInvitation.addEventListener("click", closeStart);
 
+
+const invitationTextBox = document.querySelector(".invitationTextBox");
+
+const invTxtOptions = {
+  root: null,
+  rootMargin: "-35%",
+  threshold: 0,
+}
+
+function showinvTxt(entries){
+  console.log(entries)
+}
+
+
+const observeInvitationText = new IntersectionObserver( showinvTxt, invTxtOptions)
+
+observeInvitationText.observe(invitationTextBox)
