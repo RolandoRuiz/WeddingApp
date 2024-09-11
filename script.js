@@ -397,7 +397,6 @@ const closeMsg = document.querySelector(".contentBox-InitialMsg");
 const closeBranches = document.querySelector(".initialBranches");
 const closeInitialBox = document.querySelector(".initialMsg");
 const flow = document.body;
-const closebgrGal = document.querySelector(".backgroundGallery");
 const closefixGal = document.querySelector(".galleryFixed");
 const appearDate = document.querySelectorAll(".date");
 const appearEmblem = document.querySelector(".emblem");
@@ -414,7 +413,6 @@ function closeStart(){
   closeMsg.classList.add("closeMsg");
   closeBranches.classList.add("closeBranches");
   closeInitialBox.classList.add("closeInitialBox");
-  closebgrGal.classList.add("reducebgrGallery");
   closefixGal.classList.add("reducefixedGallery");
 
   setTimeout(() => {

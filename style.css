@@ -328,7 +328,7 @@ body{
 }
 
 .backgroundGallery{
-    height: 135svh;
+    height: 100svh;
     width: 100lvw;
     display: flex;
     position: absolute;
@@ -339,26 +339,15 @@ body{
 }
 
 .galleryFixed{
+    position: absolute;
     height: 135svh;
     width: 100lvw;
-    clip-path: url(#galleryMask);    
+    clip-path: url(#galleryMask);
 }
 
-.reducebgrGallery{
-    animation: reducebgrGallery 1.5s cubic-bezier(0.43, 0.13, 0.62, 1.18) forwards 3s;
-}
 
 .reducefixedGallery{
-    animation: reducefixedGallery 1.5s cubic-bezier(0.43, 0.13, 0.62, 1.18) forwards 3s;
-}
-
-@keyframes reducebgrGallery {
-    from{
-        height: 135svh;
-    }to{
-        height: 100svh;
-    }
-    
+    animation: reducefixedGallery 1.5s ease forwards 3s;
 }
 
 @keyframes reducefixedGallery {
