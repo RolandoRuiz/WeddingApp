@@ -9,7 +9,7 @@
 
 body{
     background-color: var(--MainBgColor);
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .beVisible{
@@ -687,6 +687,63 @@ body{
     height: 90lvh;
     width: 100svw;
     margin-top: 25%; margin-bottom: 10%;
+}
+
+.invTxtBranches{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-x: clip;
+    overflow-y: visible;
+    z-index: -1;
+}
+
+.iniTxtBranch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.initbranch1{
+    position: absolute;
+    top: 2%;
+    left: -3%;
+    max-width: 28%;
+    transform-origin: bottom left;
+}
+
+.initbranch2{
+    position: absolute;
+    top: -2%;
+    right: -5%;
+    max-width: 26%;
+    transform-origin: top right;
+}
+
+.initbranch3{
+    position: absolute;
+    top: 38%;
+    right: -5%;
+    max-width: 31%;
+    transform-origin: top right;
+}
+
+.initbranch4{
+    position: absolute;
+    top: 63%;
+    left: -7%;
+    max-width: 30%;
+    transform-origin: bottom left;
+}
+
+.initbranch5{
+    position: absolute;
+    top: 76%;
+    right: -2%;
+    max-width: 90%;
+    transform-origin: top right;
+    rotate: 3deg;
 }
 
 .partnerTitleBox{
