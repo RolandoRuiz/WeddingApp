@@ -267,7 +267,7 @@ body{
 }
 
 .showEmblem{
-    animation: showEmblem 1s ease 3s forwards;
+    animation: showEmblem 1.5s ease 4s forwards;
 }
 
 @keyframes showEmblem {
@@ -456,7 +456,7 @@ body{
 }
 
 .dateAppear{
-    animation: dateAppear 0.5s cubic-bezier(.57,.23,.52,1.8) forwards 3.4s;
+    animation: dateAppear 0.8s cubic-bezier(.57,.23,.52,1.8) forwards 4s;
 }
 
 @keyframes dateAppear {
@@ -513,6 +513,23 @@ body{
     justify-items: center;
     grid-template-columns: 1fr;
     grid-template-rows: 0.6fr 1fr;
+    position: relative;
+    top: 13%;
+    opacity: 0;
+}
+
+.appearTime{
+    animation: appearTime 1.5s cubic-bezier(.57,.23,.52,2.1) forwards 5s;
+}
+
+@keyframes appearTime {
+    from{
+        opacity: 0;
+        top: 13%;
+    }to{
+        opacity: 1;
+        top: 0%;
+    }
 }
 
 #daysBox{
@@ -564,7 +581,7 @@ body{
 }
 
 .downArrow{
-
+    opacity: 0;
     grid-row-start: 3; grid-row-end: 4;
     grid-column-start: 1; grid-column-end: 2;
     width: 100%;
@@ -575,7 +592,19 @@ body{
     align-items: center;
     justify-content: center;
     z-index: 100;
-    animation: direct 1.5s ease-in infinite alternate;
+}
+
+.showDownArrow{
+    animation: direct 1.5s ease-in infinite alternate, showArrow 1s ease forwards 6s;
+}
+
+@keyframes showArrow {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+    
 }
 
 .downArrow > img{

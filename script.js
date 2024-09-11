@@ -400,6 +400,8 @@ const flow = document.body;
 const closefixGal = document.querySelector(".galleryFixed");
 const appearDate = document.querySelectorAll(".date");
 const appearEmblem = document.querySelector(".emblem");
+const appearTime = document.querySelectorAll(".timeUnit");
+const appearDArrow = document.querySelector(".downArrow");
 
 
 
@@ -417,15 +419,22 @@ function closeStart(){
 
   setTimeout(() => {
     flow.classList.add("beVisible");
-  }, 2500);
+  }, 8000);
 
   appearDate.forEach((date,i) => {
     setTimeout(() => {
         date.classList.add("dateAppear");
-    }, 250*(i+1));
+    }, 300*(i+1));
+  });
+
+  appearTime.forEach((time,i) => {
+    setTimeout(() => {
+        time.classList.add("appearTime");
+    }, 300*(i+1));
   });
 
   appearEmblem.classList.add("showEmblem");
+  appearDArrow.classList.add("showDownArrow")
 
 
 }
