@@ -723,22 +723,6 @@ body{
 
 .initbranch3{
     position: absolute;
-    top: 38%;
-    right: -5%;
-    max-width: 31%;
-    transform-origin: top right;
-}
-
-.initbranch4{
-    position: absolute;
-    top: 63%;
-    left: -7%;
-    max-width: 30%;
-    transform-origin: bottom left;
-}
-
-.initbranch5{
-    position: absolute;
     top: 76%;
     right: -2%;
     max-width: 90%;
@@ -1055,7 +1039,47 @@ body{
     grid-template-columns: 1fr;
     grid-template-rows: repeat(18, 1fr);
     
-    margin-bottom: 40%;
+    margin-bottom: 50%;
+}
+
+.mGalleryBranches{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-x: clip;
+    overflow-y: visible;
+    z-index: 200;
+}
+
+.mgalBranch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.mgalbranch1{
+    position: absolute;
+    top: 2%;
+    right: -3%;
+    max-width: 32%;
+    transform-origin: top right;
+}
+
+.mgalbranch2{
+    position: absolute;
+    bottom: 7%;
+    right: -2%;
+    max-width: 32%;
+    transform-origin: top right;
+}
+
+.mgalbranch3{
+    position: absolute;
+    bottom: -15%;
+    left: -4%;
+    max-width: 75%;
+    transform-origin: top left;
 }
 
 .galleryHeader{
@@ -1210,6 +1234,46 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.scheduleBranches{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    overflow-x: clip;
+    overflow-y: visible;
+    z-index: 200;
+}
+
+.schedBranch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.schedbranch1{
+    position: absolute;
+    top: 9%;
+    right: -3%;
+    max-width: 32%;
+    transform-origin: top right;
+}
+
+.schedbranch2{
+    position: absolute;
+    bottom: 45%;
+    left: -4%;
+    max-width: 33%;
+    transform-origin: bottom left;
+}
+
+.schedbranch3{
+    position: absolute;
+    bottom: 11%;
+    right: -4%;
+    max-width: 35%;
+    transform-origin: top left;
 }
 
 .ScheduleTitle{
@@ -1614,7 +1678,7 @@ body{
 /*DIRECTION SECTION*/
 
 .directionSection{
-    position: relative;
+    position: absolute;
     width: 100svw;
     height: 108lvh;
     background-color:var(--MainBgColor);
@@ -1623,6 +1687,28 @@ body{
     justify-items: center;
     grid-template-rows: repeat(17, 1fr);
     grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+}
+
+.directionBranches{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.directionBranch{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.dirbranch1{
+    position: absolute;
+    bottom: -0%;
+    left: -3%;
+    max-width: 95%;
+    transform-origin: bottom left;
 }
 
 .directionImg{
@@ -2176,7 +2262,7 @@ body{
     from{
         transform: rotate(0deg);
     }to{
-        transform: rotate(3deg);
+        transform: rotate(2deg);
     }
 }
 
