@@ -703,6 +703,22 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
+    scale: 2;
+}
+
+.showBranches{
+    animation: showBranches 1.5s ease forwards;
+}
+
+@keyframes showBranches {
+    from{
+        scale: 2;
+        opacity: 0;
+    }
+    to{
+        scale: 1;
+        opacity: 1;
+    }
 }
 
 .initbranch1{
@@ -752,6 +768,7 @@ body{
     font-size: 1.3em;
     text-align: center;
     margin-bottom: 13%;
+    opacity: 0;
 }
 
 .ptb-2{
@@ -766,6 +783,7 @@ body{
     grid-row-start: 4; grid-row-end: 5;
     -webkit-text-stroke: 0.5px #1e1e1e;
     text-align: center;
+    opacity: 0;
 }
 
 .wif1{
@@ -774,6 +792,7 @@ body{
     grid-row-start: 2; grid-row-end: 3;
     -webkit-text-stroke: 0.5px #1e1e1e;
     text-align: center;
+    opacity: 0;
 }
 
 .ptb-separador{
@@ -781,6 +800,7 @@ body{
     grid-row-start: 3; grid-row-end: 4;
     font-family: MirageMedium;
     font-size: 2em;
+    opacity: 0;
 
 }
 
@@ -802,6 +822,7 @@ body{
     grid-template-rows: repeat(2, 1fr);
     grid-column-start: 1; grid-column-end: 2;
     grid-row-start: 1; grid-row-end: 2;
+    opacity: 0;
 }
 
 .mainText1{
@@ -830,6 +851,7 @@ body{
     margin-bottom: 35%;
     align-items: center;
     justify-content: center;
+    opacity: 0;
 }
 
 .parentTextBox{
@@ -879,6 +901,7 @@ body{
     grid-row-start: 2; grid-row-end: 3;
     background-color: var(--MainBgColor);
     margin: 1% 0% 1% 0%;
+    color: #e16489;
 }
 
 .parent1{
@@ -912,6 +935,21 @@ body{
     align-items: center;
     grid-column-start: 1;
     grid-column-end: 2;
+    opacity: 0;
+}
+
+.appearInv{
+    animation: appearInv 1s forwards cubic-bezier(.57,.23,.52,1.8);
+}
+
+@keyframes appearInv  {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 /*sONG SECTION*/
@@ -955,6 +993,7 @@ body{
     font-family: MirageMedium;
     font-size: 1.5em;
     text-align: center;
+    color: #e16489;
 }
 
 .audioTimeline{
@@ -1029,6 +1068,25 @@ body{
     grid-row-start: 1; grid-row-end: 2;
 }
 
+.musicElement{
+    opacity: 0;
+    scale: 0.9;
+}
+
+.showMusicPlayer{
+    animation: showMusicPlayer 1s ease forwards 3s;
+}
+
+@keyframes showMusicPlayer {
+    from{
+        opacity: 0;
+        scale: 0.9;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
 /*GALLERY SECTION*/
 
 .mainGallery{
@@ -1098,7 +1156,7 @@ body{
     font-family: stylish;
     font-size: 3.5em;
     line-height: 0.9em;
-    color: #727272;
+    color: #e16489;
     grid-column-start: 1; grid-column-end: 2;
     grid-row-start: 1; grid-row-end: 2;
 }
@@ -1309,7 +1367,7 @@ body{
     line-height: 0.9em;
     grid-row-start: 1; grid-row-end: 2;
     grid-column-start: 1; grid-column-end: 2;
-    color: #818181;
+    color: #e16489;
     opacity: 0;
 }
 
@@ -1694,7 +1752,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    z-index: 1;
 }
 
 .directionBranch{
@@ -1788,10 +1846,11 @@ body{
     position: absolute;
     z-index: 2;
     object-position: bottom;
-    width: 115%;
+    width: auto;
+    height: 80%;
     justify-self: center;
-    right: 3%;
-    bottom: 0%;
+    left: 7.5%;
+    bottom: -3%;
     opacity: 1;
     scale: 1;
 

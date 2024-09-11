@@ -448,6 +448,9 @@ startInvitation.addEventListener("click", closeStart);
 
 
 const invitationTextBox = document.querySelector(".invitationTextBox");
+const getInvText = document.querySelectorAll(".getInvText");
+const showiniTxtBranches = document.querySelectorAll(".iniTxtBranch");
+const getMusicPlayer = document.querySelectorAll(".musicElement");
 
 const invTxtOptions = {
   root: null,
@@ -456,8 +459,28 @@ const invTxtOptions = {
 }
 
 function showinvTxt(entries){
-  console.log(entries)
-}
+  entries.forEach((entry =>{
+    if (entry.isIntersecting) {
+      console.log(entry)
+
+      getInvText.forEach((invText, i) => {setTimeout(() => {
+        invText.classList.add("appearInv");
+      }, 500*(i+1));});
+
+      showiniTxtBranches.forEach((iniTxtBranch, i) => {setTimeout(() => {
+        iniTxtBranch.classList.add("showBranches");
+      }, 700*(i+1));});
+
+      getMusicPlayer.forEach((musicElem, i) =>{
+        setTimeout(() => {
+          musicElem.classList.add("showMusicPlayer");
+        }, 700*(i+1));
+      })
+    }
+  }))}
+
+
+
 
 
 const observeInvitationText = new IntersectionObserver( showinvTxt, invTxtOptions)
