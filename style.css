@@ -9,7 +9,7 @@
 
 body{
     background-color: var(--MainBgColor);
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 
 .beVisible{
@@ -1309,6 +1309,8 @@ body{
 .galleryImg{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+
 }
 
 .galleryImg:nth-child(odd){
