@@ -1,3 +1,7 @@
+// window.onbeforeunload = function () {
+//  window.scrollTo(0, 0);
+//}
+
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
 
@@ -311,26 +315,67 @@ const closeDirAft = document.getElementById('closeAft');
   const leftBtn = document.querySelector(".leftPhotoBtn");
   const rightBtn = document.querySelector(".rightPhotoBtn");
   const photoList = document.querySelector(".photoList");
+  const modalList = document.querySelector(".modalList")
   const galImg = document.querySelectorAll(".galleryImg");
  
   let init = 0;
   let amount = 100;
- 
-  rightBtn.addEventListener("click", function(){
- 
-   if (init < (galImg.length - 1) * amount) {
-     init += amount;
 
-     photoList.style.transform = "translateX(-" + init + "svw";
-     photoList.style.transition = "transform 0.4s ease-out"
-   }
-   else{
-    photoList.style.transition = "";
-    photoList.style.transform = "translateX(-" + 0 + "svw";
-    init = 0;
-   }
+  function timer(){
+    moveRight();
+    pauseSlider();
+  }
+
+  var initial = setInterval(moveRight,4000);
+
+  function pauseSlider(){
+    clearTimeout(initial);
+    initial = setInterval(moveRight,8000);
+    setTimeout(resumeSlider, 8000);
+  };
+
+  function resumeSlider(){
+    clearTimeout(initial);
+    initial = setInterval(moveRight,4000);
+  };
+
+  function stopSlider(){
+    clearTimeout(initial);
+  }
+  
+  function moveRight(){
  
+    if (init < (galImg.length - 1) * amount) {
+      init += amount;
+ 
+      photoList.style.transform = "translateX(-" + init + "svw";
+      photoList.style.transition = "transform 0.4s ease-out";
+      modalList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transition = "transform 0.4s ease-out";
+
+    }
+    else{
+     photoList.style.transition = "";
+     photoList.style.transform = "translateX(-" + 0 + "svw";
+     modalList.style.transition = "";
+     modalList.style.transform = "translateX(-" + 0 + "svw";
+     init = 0;
+    }
+  }
+
+  rightBtn.addEventListener("click", timer);
+
+  const showopenModal = document.querySelector(".modalGalleryframe")
+
+  galImg.forEach((gImg)=>{
+    gImg.addEventListener("click", function openModal(){
+      console.log(gImg)
+      stopSlider()
+      showopenModal.classList.add("showModal")
+    })
   })
+
+
 
   leftBtn.addEventListener("click", function(){
 
@@ -338,13 +383,17 @@ const closeDirAft = document.getElementById('closeAft');
       init -= amount;
 
       photoList.style.transform = "translateX(-" + init + "svw";
-      photoList.style.transition = "transform 0.4s ease-out"
+      photoList.style.transition = "transform 0.4s ease-out";
+      modalList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transition = "transform 0.4s ease-out"
 
     }
     else{
       photoList.style.transition = "";
+      modalList.style.transition = "";
       init =  2900;
       photoList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transform = "translateX(-" + init + "svw";
     }
 
   })
