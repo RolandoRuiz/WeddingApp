@@ -519,26 +519,36 @@ function showGalleryInfo(entries){
 
 const observeMainGallery = new IntersectionObserver(showGalleryInfo, galOptions);
 
-const galBranches = document.querySelectorAll(".showGalBranches");
-
-function showGalleryBranches(entries){
-  entries.forEach(entry =>{
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add("showGalBranch");
-        }, 500);
-      }
-  })
-
-}
-
-const observeGalBranches = new IntersectionObserver(showGalleryBranches, galOptions);
-
 galleryElements.forEach(galElement =>{
   observeMainGallery.observe(galElement);
 })
 
-galBranches.forEach(galBranch =>{
-  observeGalBranches.observe(galBranch);
-})
+const galBranches1 = document.querySelector(".branchObs1");
+const galBranches2 = document.querySelector(".branchObs2");
+const galleryBranches1 = document.querySelector(".showGalBranches1");
+const galleryBranches2 = document.querySelector(".showGalBranches2");
+
+function showGalleryBranches1(entries){
+
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      galleryBranches1.classList.add("showGalBranch");
+  
+  }})
+
+}
+
+const observeGalBranches1 = new IntersectionObserver(showGalleryBranches1, galOptions);
+observeGalBranches1.observe(galBranches1);
+
+function showGalleryBranches2(entries){
+  entries.forEach((entry)=>{
+    if(entry.isIntersecting){
+      galleryBranches2.classList.add("showGalBranch");
+  }})
+
+}
+
+const observeGalBranches2 = new IntersectionObserver(showGalleryBranches2, galOptions);
+observeGalBranches2.observe(galBranches2);
 
