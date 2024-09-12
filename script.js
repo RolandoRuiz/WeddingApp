@@ -523,32 +523,68 @@ galleryElements.forEach(galElement =>{
   observeMainGallery.observe(galElement);
 })
 
-const galBranches1 = document.querySelector(".branchObs1");
-const galBranches2 = document.querySelector(".branchObs2");
-const galleryBranches1 = document.querySelector(".showGalBranches1");
-const galleryBranches2 = document.querySelector(".showGalBranches2");
+/* show gallery branches*/
 
-function showGalleryBranches1(entries){
+const getGalObs = document.querySelectorAll(".branchObs");
+const getmGal = document.querySelectorAll(".mgalBranch");
 
-  entries.forEach((entry)=>{
-    if(entry.isIntersecting){
-      galleryBranches1.classList.add("showGalBranch");
+function showGalleryBranches(entries){
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains("bObsTop")) {
+        getmGal[0].classList.add("showGalBranch")
+      }
+
+      if (entry.target.classList.contains("bObsBtm")) {
+        getmGal[1].classList.add("showGalBranch")
+      }
+    }
+  });
   
-  }})
-
 }
 
-const observeGalBranches1 = new IntersectionObserver(showGalleryBranches1, galOptions);
-observeGalBranches1.observe(galBranches1);
+const observeGalBranches = new IntersectionObserver(showGalleryBranches, galOptions);
 
-function showGalleryBranches2(entries){
-  entries.forEach((entry)=>{
-    if(entry.isIntersecting){
-      galleryBranches2.classList.add("showGalBranch");
-  }})
+getGalObs.forEach(galObs => {
+  observeGalBranches.observe(galObs);
+});
 
+
+const getTimeLineBranches = document.querySelectorAll(".schedBranch");
+
+function showTimelineBranches(entries){
+  entries.forEach((entry,i) =>{
+    setTimeout(() => {
+      entry.target.classList.add("showGalBranch")
+    }, 500*(i+1));
+  })
 }
 
-const observeGalBranches2 = new IntersectionObserver(showGalleryBranches2, galOptions);
-observeGalBranches2.observe(galBranches2);
+const observeTimBranches = new IntersectionObserver(showTimelineBranches, galOptions);
+
+
+getTimeLineBranches.forEach(timeBranch => {
+  observeTimBranches.observe(timeBranch);
+});
+
+
+const directionImg = document.querySelector(".directionImg");
+const showDirText = document.querySelector(".directionIntro");
+
+
+function showDirTitle(entries){
+  entries.forEach(entry =>{
+    if (entry.isIntersecting) {
+        setTimeout(() => {
+          showDirText.classList.add("appearDirText");
+        }, 500);
+      }
+    
+    })
+}
+
+const observeDirectionTitle = new IntersectionObserver(showDirTitle, galOptions);
+observeDirectionTitle.observe(directionImg);
+
+
 
