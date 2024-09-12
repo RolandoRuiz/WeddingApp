@@ -450,18 +450,19 @@ startInvitation.addEventListener("click", closeStart);
 const invitationTextBox = document.querySelector(".invitationTextBox");
 const getInvText = document.querySelectorAll(".getInvText");
 const showiniTxtBranches = document.querySelectorAll(".iniTxtBranch");
-const getMusicPlayer = document.querySelectorAll(".musicElement");
+const showiniTxtBranches2 = document.querySelector(".iniTxtBranch2");
+const getMusicPlayer = document.querySelector('.OurSongBox');
+const musicElements = document.querySelectorAll(".musicElement");
 
-const invTxtOptions = {
+const genOptions = {
   root: null,
-  rootMargin: "-35%",
+  rootMargin: "-25%",
   threshold: 0,
 }
 
 function showinvTxt(entries){
   entries.forEach((entry =>{
     if (entry.isIntersecting) {
-      console.log(entry)
 
       getInvText.forEach((invText, i) => {setTimeout(() => {
         invText.classList.add("appearInv");
@@ -471,18 +472,73 @@ function showinvTxt(entries){
         iniTxtBranch.classList.add("showBranches");
       }, 700*(i+1));});
 
-      getMusicPlayer.forEach((musicElem, i) =>{
-        setTimeout(() => {
-          musicElem.classList.add("showMusicPlayer");
-        }, 700*(i+1));
-      })
+      setTimeout(() => {
+        showiniTxtBranches2.classList.add("slideBranches");
+      }, 1300);
     }
   }))}
 
+  function showMusicPlayer(entries){
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        musicElements.forEach((musicElem, i) =>{
+          setTimeout(() => {
+            musicElem.classList.add("showMusicPlayer");
+          }, 300*(i+1));
+        });
+      }
+    })
+  }
 
 
+const observeInvitationText = new IntersectionObserver( showinvTxt, genOptions);
+observeInvitationText.observe(invitationTextBox);
+
+const observeMusicPlayer = new IntersectionObserver(showMusicPlayer, genOptions);
+observeMusicPlayer.observe(getMusicPlayer);
+
+const galOptions = {
+  root: null,
+  rootMargin: "-30%",
+  threshold: 0,
+}
 
 
-const observeInvitationText = new IntersectionObserver( showinvTxt, invTxtOptions)
+const galleryElements = document.querySelectorAll(".galleryElements");
 
-observeInvitationText.observe(invitationTextBox)
+function showGalleryInfo(entries){
+  entries.forEach(entry =>{
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("showGalElem");
+        }, 500);
+      }
+  })
+
+}
+
+const observeMainGallery = new IntersectionObserver(showGalleryInfo, galOptions);
+
+const galBranches = document.querySelectorAll(".showGalBranches");
+
+function showGalleryBranches(entries){
+  entries.forEach(entry =>{
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add("showGalBranch");
+        }, 500);
+      }
+  })
+
+}
+
+const observeGalBranches = new IntersectionObserver(showGalleryBranches, galOptions);
+
+galleryElements.forEach(galElement =>{
+  observeMainGallery.observe(galElement);
+})
+
+galBranches.forEach(galBranch =>{
+  observeGalBranches.observe(galBranch);
+})
+

@@ -706,8 +706,19 @@ body{
     scale: 2;
 }
 
+.iniTxtBranch2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateX(60px);
+}
+
 .showBranches{
     animation: showBranches 1.5s ease forwards;
+}
+
+.slideBranches{
+    animation: slideBranches 2s ease-out forwards;
 }
 
 @keyframes showBranches {
@@ -717,6 +728,17 @@ body{
     }
     to{
         scale: 1;
+        opacity: 1;
+    }
+}
+
+@keyframes slideBranches {
+    from{
+        transform: translate(100%, -10%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0%, 0%);
         opacity: 1;
     }
 }
@@ -939,7 +961,7 @@ body{
 }
 
 .appearInv{
-    animation: appearInv 1s forwards cubic-bezier(.57,.23,.52,1.8);
+    animation: appearInv 0.6s forwards cubic-bezier(.57,.23,.52,1.8);
 }
 
 @keyframes appearInv  {
@@ -973,6 +995,17 @@ body{
     height: 7lvh;
     object-fit: contain;
     margin-bottom: 5%;
+    animation: spin 4s ease-in  infinite alternate;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotateY(0deg);
+    }50%{
+        transform: rotateY(0deg);
+    }100%{
+        transform: rotateY(90deg);
+    }
 }
 
 .musicPlayer{
@@ -993,7 +1026,7 @@ body{
     font-family: MirageMedium;
     font-size: 1.5em;
     text-align: center;
-    color: #e16489;
+    color: #1e1e1e;
 }
 
 .audioTimeline{
@@ -1017,7 +1050,7 @@ body{
 .timelineProgress{
     width: 0%;
     height: 100%;
-    background-color: #1e1e1e;
+    background-color: #e16489;
 }
 
 
@@ -1074,7 +1107,7 @@ body{
 }
 
 .showMusicPlayer{
-    animation: showMusicPlayer 1s ease forwards 3s;
+    animation: showMusicPlayer 0.6s ease forwards;
 }
 
 @keyframes showMusicPlayer {
@@ -1107,7 +1140,7 @@ body{
     z-index: 100;
     overflow-x: clip;
     overflow-y: visible;
-    z-index: 200;
+    margin-bottom: 50%;
 }
 
 .mgalBranch{
@@ -1121,7 +1154,7 @@ body{
     top: 2%;
     right: -3%;
     max-width: 32%;
-    transform-origin: top right;
+    transform-origin: top left;
 }
 
 .mgalbranch2{
@@ -1138,6 +1171,36 @@ body{
     left: -4%;
     max-width: 75%;
     transform-origin: top left;
+}
+
+.branchObs{
+    width: 100%;
+    height: 30%;
+}
+
+.bottomObs{
+    position: absolute;
+    bottom: 0%;
+}
+
+.showGalBranches{
+    opacity: 0;
+    scale: 1.5;
+}
+
+.showGalBranch{
+    animation: showGalBranch 2s ease forwards;
+}
+
+@keyframes showGalBranch {
+    from{
+        opacity: 0;
+        scale: 1.5;
+    }to{
+        opacity: 1;
+        scale: 1;
+    }
+    
 }
 
 .galleryHeader{
@@ -1238,29 +1301,21 @@ body{
 }
 
 .leftPhotoBtn{
-    width: 100%;
-    height: 100%;
-    grid-column-start: 1; grid-column-end: 2;
-    grid-row-start: 1; grid-row-end: 2;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 30%;
+    position: absolute;
+    height: 3.5em;
+    width: 2em;
+    left: 4%;
     filter: drop-shadow(3px 5px 3px rgba(36, 36, 36, 0.423));
-    z-index: 2;
+    z-index: 100;
 }
 
 .rightPhotoBtn{
-    width: 100%;
-    height: 100%;
-    grid-column-start: 3; grid-column-end: 4;
-    grid-row-start: 1; grid-row-end: 2;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    padding: 30%;
+    position: absolute;
+    height: 3.5em;
+    width: 2em;
+    right: 4%;
     filter: drop-shadow(3px 5px 3px rgba(36, 36, 36, 0.423));
-    z-index: 2;
+    z-index: 100;
 }
 
 .leftPhotoBtn:active{
@@ -1279,6 +1334,42 @@ body{
     z-index: 1;
     clip-path: url(#galleryMask2);
    
+}
+
+.buttonBox{
+    position: absolute;
+    display: grid;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+.nestedBtn{
+    height: 5%;
+    width: 100%;
+}
+
+
+.galleryElements{
+    opacity: 0;
+    transform: translateY(-30px);
+
+}
+
+.showGalElem{
+    animation: showGalElem 0.7s cubic-bezier(.57,.23,.52,1.8) forwards;
+}
+
+@keyframes showGalElem {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    
 }
 
 
@@ -2288,7 +2379,7 @@ body{
 }
 
 .closeBranches{
-    animation: closeBranches 2s ease 0.5s forwards;
+    animation: closeBranches 2s ease 0.5s forwards ;
 }
 
 @keyframes closeBranches {
@@ -2319,7 +2410,7 @@ body{
 
 @keyframes wiggle {
     from{
-        transform: rotate(0deg);
+        transform: rotate(-1deg);
     }to{
         transform: rotate(2deg);
     }
