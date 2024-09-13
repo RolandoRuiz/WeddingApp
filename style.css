@@ -1326,6 +1326,13 @@ body{
 
 }
 
+.modalImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
 .galleryImg:nth-child(odd){
     background-color: rgb(83, 83, 83);
 }

@@ -318,7 +318,7 @@ const closeDirAft = document.getElementById('closeAft');
   const modalList = document.querySelector(".modalList")
   const galImg = document.querySelectorAll(".galleryImg");
  
-  let startUnit = 0;
+  let init = 0;
   let amount = 100;
 
   function timer(){
@@ -343,16 +343,15 @@ const closeDirAft = document.getElementById('closeAft');
     clearTimeout(initial);
   }
 
-  var galLength
   
   function moveRight(){
  
-    if (startUnit < (galImg.length - 1) * amount) {
-      startUnit += amount;
+    if (init < (galImg.length - 1) * amount) {
+      init += amount;
  
-      photoList.style.transform = "translateX(-" + startUnit + "svw";
+      photoList.style.transform = "translateX(-" + init + "svw";
       photoList.style.transition = "transform 0.4s ease-out";
-      modalList.style.transform = "translateX(-" + startUnit + "svw";
+      modalList.style.transform = "translateX(-" + init + "svw";
       modalList.style.transition = "transform 0.4s ease-out";
 
     }
@@ -390,21 +389,21 @@ const closeDirAft = document.getElementById('closeAft');
 
   leftBtn.addEventListener("click", function(){
 
-    if (startUnit > 0) {
-      startUnit -= amount;
+    if (init > 0) {
+      init -= amount;
 
-      photoList.style.transform = "translateX(-" + startUnit + "svw";
+      photoList.style.transform = "translateX(-" + init + "svw";
       photoList.style.transition = "transform 0.4s ease-out";
-      modalList.style.transform = "translateX(-" + startUnit + "svw";
+      modalList.style.transform = "translateX(-" + init + "svw";
       modalList.style.transition = "transform 0.4s ease-out"
 
     }
     else{
       photoList.style.transition = "";
       modalList.style.transition = "";
-      startUnit =  2900;
-      photoList.style.transform = "translateX(-" + startUnit + "svw";
-      modalList.style.transform = "translateX(-" + startUnit + "svw";
+      init =  2900;
+      photoList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transform = "translateX(-" + init + "svw";
     }
 
   })
