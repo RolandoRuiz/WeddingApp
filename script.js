@@ -1,6 +1,6 @@
-// window.onbeforeunload = function () {
-//  window.scrollTo(0, 0);
-//}
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 
 // Set the date we're counting down to
 var countDownDate = new Date("Oct 12, 2024 12:00:00").getTime();
@@ -369,11 +369,20 @@ const closeDirAft = document.getElementById('closeAft');
 
   galImg.forEach((gImg)=>{
     gImg.addEventListener("click", function openModal(){
-      console.log(gImg)
       stopSlider()
       showopenModal.classList.add("showModal")
     })
   })
+9
+  const closeModal = document.querySelector(".closeModalBtn");
+
+
+  function hideModal(){
+    showopenModal.classList.remove("showModal")
+    resumeSlider()
+  }
+
+  closeModal.addEventListener("click", hideModal)
 
 
 
