@@ -318,7 +318,7 @@ const closeDirAft = document.getElementById('closeAft');
   const modalList = document.querySelector(".modalList")
   const galImg = document.querySelectorAll(".galleryImg");
  
-  let init = 0;
+  let startUnit = 0;
   let amount = 100;
 
   function timer(){
@@ -342,15 +342,17 @@ const closeDirAft = document.getElementById('closeAft');
   function stopSlider(){
     clearTimeout(initial);
   }
+
+  var galLength
   
   function moveRight(){
  
-    if (init < (galImg.length - 1) * amount) {
-      init += amount;
+    if (startUnit < (galImg.length - 1) * amount) {
+      startUnit += amount;
  
-      photoList.style.transform = "translateX(-" + init + "svw";
+      photoList.style.transform = "translateX(-" + startUnit + "svw";
       photoList.style.transition = "transform 0.4s ease-out";
-      modalList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transform = "translateX(-" + startUnit + "svw";
       modalList.style.transition = "transform 0.4s ease-out";
 
     }
@@ -388,21 +390,21 @@ const closeDirAft = document.getElementById('closeAft');
 
   leftBtn.addEventListener("click", function(){
 
-    if (init > 0) {
-      init -= amount;
+    if (startUnit > 0) {
+      startUnit -= amount;
 
-      photoList.style.transform = "translateX(-" + init + "svw";
+      photoList.style.transform = "translateX(-" + startUnit + "svw";
       photoList.style.transition = "transform 0.4s ease-out";
-      modalList.style.transform = "translateX(-" + init + "svw";
+      modalList.style.transform = "translateX(-" + startUnit + "svw";
       modalList.style.transition = "transform 0.4s ease-out"
 
     }
     else{
       photoList.style.transition = "";
       modalList.style.transition = "";
-      init =  2900;
-      photoList.style.transform = "translateX(-" + init + "svw";
-      modalList.style.transform = "translateX(-" + init + "svw";
+      startUnit =  2900;
+      photoList.style.transform = "translateX(-" + startUnit + "svw";
+      modalList.style.transform = "translateX(-" + startUnit + "svw";
     }
 
   })
