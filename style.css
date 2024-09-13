@@ -2611,7 +2611,7 @@ body{
     visibility: hidden;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 500px) {
     .onlySmartphone{
         display: grid;
         position: sticky;
@@ -2627,9 +2627,10 @@ body{
     }
 
     .alertBox{
-        width: 50svw;
-        height: 50svw;
+        width: 400px;
+        height: 400px;
         border: #1e1e1e 4px solid;
+        background-color: #f4f4f494;
         border-radius: 20px;
         display: flex;
         flex-direction: column;
@@ -2659,8 +2660,9 @@ body{
 
     .alertBranch{
         position: absolute;
-        scale: 0.7;
-        left: -30%;
-        bottom: -15%;
+        max-width: 500px;
+        left: -3%;
+        bottom: -0%;
+        z-index: -1;
     }
 }
