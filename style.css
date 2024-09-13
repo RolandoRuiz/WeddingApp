@@ -2604,3 +2604,63 @@ body{
 .closeModalBtn:focus{
     background-color: rgb(255, 184, 198);
 }
+
+.onlySmartphone{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 600px) {
+    .onlySmartphone{
+        display: grid;
+        position: sticky;
+        opacity: 1;
+        visibility: visible;
+        width: 100svw;
+        height: 100lvh;
+        background-color: var(--MainBgColor);
+        z-index: 3000;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .alertBox{
+        width: 50svw;
+        height: 50svw;
+        border: #1e1e1e 4px solid;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .alertTitle{
+        text-align: center;
+        width: 100%;
+        font-family: stylish;
+        font-size: 5em;
+    }
+
+    .alertText{
+        text-align: center;
+        width: 100%;
+        font-family: MiragRegular;
+        font-size: 1.5em;
+    }
+
+    .alertBranchbox{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .alertBranch{
+        position: absolute;
+        scale: 0.7;
+        left: -30%;
+        bottom: -15%;
+    }
+}
