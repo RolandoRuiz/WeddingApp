@@ -980,7 +980,7 @@ body{
 
 .OurSongBox{
     height: 25lvh;
-    width: 100%;
+    width: 100svw;
     margin-bottom: 20%;
     display: flex;
     flex-direction: column;
@@ -995,7 +995,7 @@ body{
 
 .mIcon{
     width: 100%;
-    height: 7lvh;
+    height: 30%;
     object-fit: contain;
     margin-bottom: 5%;
     animation: spin 4s ease-in  infinite alternate;
@@ -1033,8 +1033,9 @@ body{
 }
 
 .audioTimeline{
-    width: 80%;
-    height: 5lvh;
+    max-width: 80svw;
+    width: 80svw;
+    height: 100%;
     display: grid;
     grid-column-start: 1; grid-column-end: 2;
     grid-row-start: 2; grid-row-end: 3;
@@ -1081,7 +1082,9 @@ body{
 }
 
 .playIcon{
-    height: 100%;
+    position: relative;
+    height: 30px;
+    max-height: 30px;
     grid-column-start: 1; grid-column-end: 2;
     grid-row-start: 1; grid-row-end: 2;
     background-color: var(--MainBgColor);
@@ -1089,7 +1092,9 @@ body{
 }
 
 .pauseIcon{
-    height: 100%;
+    position: relative;
+    height: 30px;
+    max-height: 30px;
     grid-column-start: 1; grid-column-end: 2;
     grid-row-start: 1; grid-row-end: 2;
     background-color: var(--MainBgColor);
